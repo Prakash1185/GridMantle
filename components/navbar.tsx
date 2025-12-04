@@ -48,11 +48,11 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Navigation */}
-      <div className="hidden md:flex space-x-4 text-muted-foreground">
-        <Link href={"/"} className="hover:text-foreground">
+      <div className="hidden md:flex space-x-4 text-muted-foreground font-medium">
+        <Link href={"/"} className="hover:text-primary transition-all duration-200 ">
           Docs
         </Link>
-        <Link href={"/"} className="hover:text-foreground">
+        <Link href={"/"} className="hover:text-primary transition-all duration-200 ">
           Components
         </Link>
       </div>
