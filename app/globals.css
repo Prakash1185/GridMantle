@@ -41,54 +41,41 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* ----------------------
-   Brand & Neutral Palette
-   (Rose theme + soothing dark)
-   ---------------------- */
 
 :root {
   --radius: 0.625rem;
 
-  /* Light theme (soft neutral / near-white) */
-  --background: #fff9f9;           /* very soft warm white */
-  --foreground: #09101a;           /* dark slate for text on light bg */
+  --background: #fff9f9;          
+  --foreground: #09101a;          
   --card: #ffffff;
   --card-foreground: #09101a;
   --popover: #ffffff;
   --popover-foreground: #09101a;
 
-  /* Primary (Rose) */
-  --primary: #E11D48;              /* rose-600 */
+  --primary: #E11D48;              
   --primary-foreground: #ffffff;
 
-  /* Secondary / accents */
-  --secondary: #F43F5E;            /* rose-500 */
+  --secondary: #F43F5E;            
   --secondary-foreground: #09101a;
 
-  /* Muted / subtle UI */
   --muted: #f4dfe2;
   --muted-foreground: #6b7280;
 
-  /* Accent / interactive */
   --accent: #FCD0D6;
   --accent-foreground: #09101a;
 
-  /* Destructive */
   --destructive: #d92b3a;
 
-  /* Borders, inputs, rings */
-  --border: rgba(15,23,36,0.08);   /* subtle border on light */
+  --border: rgba(15,23,36,0.08);   
   --input: rgba(15,23,36,0.06);
   --ring: rgba(225,29,72,0.14);
 
-  /* Charts (pleasant, rose-compatible palette) */
   --chart-1: #F43F5E;
   --chart-2: #E11D48;
   --chart-3: #FDB3BD;
   --chart-4: #FF8FA3;
   --chart-5: #FFC6CE;
 
-  /* Sidebar specifics */
   --sidebar: #fffafb;
   --sidebar-foreground: #09101a;
   --sidebar-primary: #E11D48;
@@ -99,52 +86,46 @@
   --sidebar-ring: rgba(225,29,72,0.12);
 }
 
-/* ----------------------
-   Dark theme (soothing dark charcoal/navy — not pitch black)
-   Compatible with the rose palette (warm contrast)
-   ---------------------- */
 
 .dark {
-  /* Soothing deep charcoal with a subtle blue undertone for calmness */
-  --background: #09101a;           /* deep charcoal / navy */
-  --foreground: #f8f6f7;           /* soft off-white for readable text */
-  --card: #0b1220;                 /* slightly darker card to separate */
+
+  --background: #09101a;
+  --foreground: #f8f6f7;            
+  --card: #0b1220;                  
   --card-foreground: #f8f6f7;
   --popover: #0b1220;
   --popover-foreground: #f8f6f7;
 
-  /* Primary (rose pops against the dark) */
-  --primary: #F43F5E;              /* slightly brighter rose on dark */
+  
+  --primary: #F43F5E;             
   --primary-foreground: #ffffff;
-
-  /* Secondary */
+ 
   --secondary: #E11D48;
   --secondary-foreground: #fffafb;
 
-  /* Muted / subtle UI */
-  --muted: #14202b;                /* subtle contrast from background */
-  --muted-foreground: #94a3b8;     /* desaturated light for captions */
+ 
+  --muted: #14202b;               
+  --muted-foreground: #94a3b8;      
 
-  /* Accent / interactive */
-  --accent: #3b1820;               /* very subtle rose-tinted accent bg */
+ 
+  --accent: #3b1820;               
   --accent-foreground: #f8f6f7;
-
-  /* Destructive */
+ 
   --destructive: #ff6b6b;
 
-  /* Borders, inputs, rings */
-  --border: rgba(255,255,255,0.06);   /* faint border on dark */
+ 
+  --border: rgba(255,255,255,0.06);    
   --input: rgba(255,255,255,0.04);
-  --ring: rgba(244,63,94,0.16);       /* rose-tinted ring for focus */
+  --ring: rgba(244,63,94,0.16);       
 
-  /* Charts (tuned for dark) */
+ 
   --chart-1: #F43F5E;
   --chart-2: #E11D48;
   --chart-3: #FF9AA8;
   --chart-4: #FFB1C0;
   --chart-5: #FFD9E0;
 
-  /* Sidebar specifics */
+ 
   --sidebar: #0b1220;
   --sidebar-foreground: #f8f6f7;
   --sidebar-primary: #F43F5E;
@@ -155,7 +136,7 @@
   --sidebar-ring: rgba(244,63,94,0.12);
 }
 
-/* Keep base layer using the variables above */
+ 
 @layer base {
   * {
     @apply border-border outline-ring/50;
