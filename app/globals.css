@@ -51,11 +51,11 @@
 
   /* Light theme (soft neutral / near-white) */
   --background: #fff9f9;           /* very soft warm white */
-  --foreground: #06080a;           /* dark slate for text on light bg */
+  --foreground: #09101a;           /* dark slate for text on light bg */
   --card: #ffffff;
-  --card-foreground: #06080a;
+  --card-foreground: #09101a;
   --popover: #ffffff;
-  --popover-foreground: #06080a;
+  --popover-foreground: #09101a;
 
   /* Primary (Rose) */
   --primary: #E11D48;              /* rose-600 */
@@ -63,7 +63,7 @@
 
   /* Secondary / accents */
   --secondary: #F43F5E;            /* rose-500 */
-  --secondary-foreground: #06080a;
+  --secondary-foreground: #09101a;
 
   /* Muted / subtle UI */
   --muted: #f4dfe2;
@@ -71,7 +71,7 @@
 
   /* Accent / interactive */
   --accent: #FCD0D6;
-  --accent-foreground: #06080a;
+  --accent-foreground: #09101a;
 
   /* Destructive */
   --destructive: #d92b3a;
@@ -90,7 +90,7 @@
 
   /* Sidebar specifics */
   --sidebar: #fffafb;
-  --sidebar-foreground: #06080a;
+  --sidebar-foreground: #09101a;
   --sidebar-primary: #E11D48;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #F43F5E;
@@ -106,7 +106,7 @@
 
 .dark {
   /* Soothing deep charcoal with a subtle blue undertone for calmness */
-  --background: #06080a;           /* deep charcoal / navy */
+  --background: #09101a;           /* deep charcoal / navy */
   --foreground: #f8f6f7;           /* soft off-white for readable text */
   --card: #0b1220;                 /* slightly darker card to separate */
   --card-foreground: #f8f6f7;
