@@ -7,7 +7,6 @@ export interface DocPage {
 }
 
 export const docPages: DocPage[] = [
-  // Getting Started
   {
     slug: "introduction",
     title: "Introduction",
@@ -23,33 +22,18 @@ export const docPages: DocPage[] = [
     order: 2,
   },
   {
-    slug: "quick-start",
-    title: "Quick Start",
-    description: "Get up and running with GridMantle in minutes",
-    category: "Getting Started",
+    slug: "normal-grid",
+    title: "Normal Grid",
+    description: "Simple and flexible grid layout system",
+    category: "Components",
     order: 3,
   },
-  // Components
   {
-    slug: "masonry-grid",
-    title: "Masonry Grid",
-    description: "Pinterest-style masonry grid layout",
+    slug: "advanced-grid",
+    title: "Advanced Grid",
+    description: "Responsive grid with breakpoint controls",
     category: "Components",
     order: 4,
-  },
-  {
-    slug: "bento-grid",
-    title: "Bento Grid",
-    description: "Modern bento-style grid layout",
-    category: "Components",
-    order: 5,
-  },
-  {
-    slug: "responsive-grid",
-    title: "Responsive Grid",
-    description: "Fully responsive grid system",
-    category: "Components",
-    order: 6,
   },
 ];
 
