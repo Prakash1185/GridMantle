@@ -49,11 +49,17 @@ const Navbar = () => {
 
       {/* Desktop Navigation */}
       <div className="hidden md:flex space-x-4 text-muted-foreground font-medium">
-        <Link href={"/"} className="hover:text-primary transition-all duration-200 ">
+        <Link
+          href={"/docs"}
+          className="hover:text-primary transition-all duration-200"
+        >
           Docs
         </Link>
-        <Link href={"/"} className="hover:text-primary transition-all duration-200 ">
-          Components
+        <Link
+          href={"/blocks"}
+          className="hover:text-primary transition-all duration-200"
+        >
+          Blocks
         </Link>
       </div>
 
@@ -94,20 +100,20 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="absolute top-full left-4 right-4 mt-2 md:hidden bg-background border rounded-xl shadow-lg overflow-hidden">
-          <div className="flex flex-col p-4 space-y-">
+          <div className="flex flex-col p-4 space-y-3">
             <Link
-              href={"/"}
+              href={"/docs"}
               className="text-muted-foreground hover:text-foreground py-2 px-3 rounded-lg hover:bg-accent transition-colors"
               onClick={closeMenu}
             >
               Docs
             </Link>
             <Link
-              href={"/"}
+              href={"/blocks"}
               className="text-muted-foreground hover:text-foreground py-2 px-3 rounded-lg hover:bg-accent transition-colors"
               onClick={closeMenu}
             >
-              Components
+              Blocks
             </Link>
             <div className="pt-2 ml-2">
               <ModeToggle />
