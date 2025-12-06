@@ -1,14 +1,19 @@
-import { BlockContent } from "./types";
-import { masonryGridBlock } from "./masonry-grid";
-import { bentoGridBlock } from "./bento-grid";
-import { responsiveGridBlock } from "./responsive-grid";
+import { normalGridContent } from "./normal-grid";
+import { advancedGridContent } from "./advanced-grid";
 
-export const blockContentMap: Record<string, BlockContent> = {
-  "masonry-grid": masonryGridBlock,
-  "bento-grid": bentoGridBlock,
-  "responsive-grid": responsiveGridBlock,
-};
+export const blockComponents = [
+  {
+    slug: "normal-grid",
+    name: "Normal Grid",
+    content: normalGridContent,
+  },
+  {
+    slug: "advanced-grid",
+    name: "Advanced Grid",
+    content: advancedGridContent,
+  },
+];
 
-export function getBlockContentBySlug(slug: string): BlockContent | undefined {
-  return blockContentMap[slug];
+export function getBlockBySlug(slug: string) {
+  return blockComponents.find((block) => block.slug === slug);
 }

@@ -18,14 +18,14 @@ interface ApiTableProps {
 
 export function ApiTable({ props }: ApiTableProps) {
   return (
-    <div className="w-full overflow-auto border rounded-lg">
+    <div className="w-full overflow-x-auto border rounded-lg">
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[180px] font-semibold">Prop</TableHead>
-            <TableHead className="w-[200px] font-semibold">Type</TableHead>
-            <TableHead className="w-[120px] font-semibold">Default</TableHead>
-            <TableHead className="font-semibold">Description</TableHead>
+            <TableHead className="min-w-[180px] font-semibold">Prop</TableHead>
+            <TableHead className="min-w-[200px] font-semibold">Type</TableHead>
+            <TableHead className="min-w-[120px] font-semibold">Default</TableHead>
+            <TableHead className="min-w-[300px] font-semibold">Description</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>

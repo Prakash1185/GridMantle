@@ -1,18 +1,15 @@
 import { DocContent } from "./types";
 import { introductionContent } from "./introduction";
 import { installationContent } from "./installation";
-import { quickStartContent } from "./quick-start";
-import { masonryGridContent } from "./masonry-grid";
-import { bentoGridContent } from "./bento-grid";
-import { responsiveGridContent } from "./responsive-grid";
+// Import from blocks folder
+import { normalGridContent } from "@/lib/blocks/content/normal-grid";
+import { advancedGridContent } from "@/lib/blocks/content/advanced-grid";
 
 export const contentMap: Record<string, DocContent> = {
   introduction: introductionContent,
   installation: installationContent,
-  "quick-start": quickStartContent,
-  "masonry-grid": masonryGridContent,
-  "bento-grid": bentoGridContent,
-  "responsive-grid": responsiveGridContent,
+  "normal-grid": normalGridContent,
+  "advanced-grid": advancedGridContent,
 };
 
 export function getContentBySlug(slug: string): DocContent | undefined {

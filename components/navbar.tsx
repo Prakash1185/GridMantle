@@ -5,6 +5,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Button } from "./ui/button";
 import { RiGithubFill, RiMenuLine, RiCloseLine } from "@remixicon/react";
 import { ModeToggle } from "./mode-toggle";
+import { CommandSearch } from "./command-search";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,32 +40,36 @@ const Navbar = () => {
   return (
     <nav
       ref={menuRef}
-      className="flex items-center justify-between gap-4 md:gap-28 border py-2 w-[calc(100%-2rem)] md:w-fit mx-auto px-4 md:px-6 rounded-xl my-2.5 bg-background/80 z-20 sticky top-2.5 backdrop-blur-lg"
+      className="flex items-center justify-between gap-4 border py-2 w-[calc(100%-2rem)] lg:w-[calc(100%-16rem)] mx-auto px-4 md:px-6 rounded-xl my-2.5 bg-background/80 z-50 sticky top-2.5 backdrop-blur-lg"
     >
-      <div className="flex items-center gap-4 flex-1 md:flex-initial">
-        <Link href={"/"} className="text-xl md:text-2xl font-semibold">
+      {/* LEFT GROUP - Logo + Links */}
+      <div className="flex items-center gap-6 flex-shrink-0">
+        <Link href={"/"} className="text-xl md:text-2xl font-semibold whitespace-nowrap">
           <h1>GridMantle</h1>
         </Link>
+
+        {/* Desktop Navigation Links */}
+        <div className="hidden lg:flex items-center space-x-4 text-muted-foreground font-medium">
+          <Link
+            href={"/docs/introduction"}
+            className="hover:text-primary transition-all duration-200 whitespace-nowrap"
+          >
+            Docs
+          </Link>
+          <Link
+            href={"/blocks"}
+            className="hover:text-primary transition-all duration-200 whitespace-nowrap"
+          >
+            Blocks
+          </Link>
+        </div>
       </div>
 
-      {/* Desktop Navigation */}
-      <div className="hidden md:flex space-x-4 text-muted-foreground font-medium">
-        <Link
-          href={"/docs"}
-          className="hover:text-primary transition-all duration-200"
-        >
-          Docs
-        </Link>
-        <Link
-          href={"/blocks"}
-          className="hover:text-primary transition-all duration-200"
-        >
-          Blocks
-        </Link>
-      </div>
+      
 
-      {/* Desktop & Mobile Actions */}
-      <div className="flex items-center justify-center gap-2">
+      {/* RIGHT GROUP - Actions */}
+      <div className="flex items-center justify-center gap-2 flex-shrink-0">
+          <CommandSearch />
         <Button
           size={"icon-lg"}
           className="bg-transparent border-2 hover:bg-primary/20 hover:text-primary cursor-pointer"
@@ -79,14 +84,14 @@ const Navbar = () => {
           </a>
         </Button>
 
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <ModeToggle />
         </div>
 
         {/* Mobile Menu Toggle */}
         <Button
           size={"icon-lg"}
-          className="md:hidden bg-transparent border-2 hover:bg-primary/20 hover:text-primary"
+          className="lg:hidden bg-transparent border-2 hover:bg-primary/20 hover:text-primary"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? (
@@ -99,10 +104,10 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute top-full left-4 right-4 mt-2 md:hidden bg-background border rounded-xl shadow-lg overflow-hidden">
+        <div className="absolute top-full left-4 right-4 mt-2 lg:hidden bg-background border rounded-xl shadow-lg overflow-hidden">
           <div className="flex flex-col p-4 space-y-3">
             <Link
-              href={"/docs"}
+              href={"/docs/introduction"}
               className="text-muted-foreground hover:text-foreground py-2 px-3 rounded-lg hover:bg-accent transition-colors"
               onClick={closeMenu}
             >
@@ -115,7 +120,7 @@ const Navbar = () => {
             >
               Blocks
             </Link>
-            <div className="pt-2 ml-2">
+            <div className="pt-2 px-3">
               <ModeToggle />
             </div>
           </div>
