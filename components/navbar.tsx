@@ -81,7 +81,7 @@ const Navbar = () => {
             </button>
           </SheetTrigger>
           <SheetContent side="left" className="w-[280px] sm:w-[320px] overflow-y-auto pl-5">
-            <SheetHeader className="z-20">
+            <SheetHeader className="">
               <SheetTitle className="text-2xl instrumental ">GridMantle</SheetTitle>
             </SheetHeader>
 
