@@ -1,10 +1,10 @@
 import React from "react";
-import HeroSection from "@/components/landing/hero-section";
+import LandingPage from "@/components/landing/landing-page";
 
 const Home = () => {
   return (
     <main className="w-full">
-      <HeroSection />
+      <LandingPage />
     </main>
   );
 };

@@ -88,7 +88,7 @@ export function CommandSearch() {
                 >
                   {getIcon(item.category as SearchItem["category"])}
                   <div className="flex flex-col">
-                    <span>{item.title}</span>
+                    <span className="font-medium">{item.title}</span>
                     <span className="text-xs text-muted-foreground">
                       {item.description}
                     </span>
