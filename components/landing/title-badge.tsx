@@ -1,7 +1,7 @@
 import React from 'react'
 import { Badge } from '../ui/badge'
 
-const TitleBadge = ({title}) => {
+const TitleBadge = ({title}: {title: string}) => {
   return (
      <div className='px-5'>
         {/* badge */}
