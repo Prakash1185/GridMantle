@@ -1,11 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark, vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { useState, useEffect, useSyncExternalStore } from "react";
+import { codeToHtml } from "shiki";
 import { Check, Copy } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { darcula, monokai, nightOwl, obsidian, vs2015 } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { useTheme } from "next-themes";
 
 interface CodeHighlightProps {
   code: string;
@@ -14,6 +13,31 @@ interface CodeHighlightProps {
 
 export function CodeHighlight({ code, language = "tsx" }: CodeHighlightProps) {
   const [copied, setCopied] = useState(false);
+  const [html, setHtml] = useState("");
+  const { theme, resolvedTheme } = useTheme();
+  
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
+
+  useEffect(() => {
+    if (!mounted) return;
+
+    const highlightCode = async () => {
+      const currentTheme = theme === "system" ? resolvedTheme : theme;
+      const shikiTheme = currentTheme === "dark" ? "aurora-x" : "github-light-high-contrast";
+
+      const highlighted = await codeToHtml(code, {
+        lang: language,
+        theme: shikiTheme,
+      });
+      setHtml(highlighted);
+    };
+
+    highlightCode();
+  }, [code, language, theme, resolvedTheme, mounted]);
 
   const copyToClipboard = async () => {
     await navigator.clipboard.writeText(code);
@@ -21,12 +45,19 @@ export function CodeHighlight({ code, language = "tsx" }: CodeHighlightProps) {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  // Prevent hydration mismatch
+  if (!mounted) {
+    return (
+      <div className="relative rounded-lg border overflow-hidden animate-pulse">
+        <div className="h-10 bg-muted/80 border-b" />
+        <div className="h-32 bg-muted/50" />
+      </div>
+    );
+  }
+
   return (
     <div className="relative rounded-lg border overflow-hidden">
-      <div className="flex items-center justify-between px-4 py-2 border-b bg-muted/80">
-        <span className="text-xs text-muted-foreground font-mono uppercase tracking-wider">
-          {language}
-        </span>
+      <div className="flex items-center justify-end px-4 py-2 border-b bg-muted/80 dark:bg-muted/80">
         <Button
           size="sm"
           variant="ghost"
@@ -40,21 +71,10 @@ export function CodeHighlight({ code, language = "tsx" }: CodeHighlightProps) {
           )}
         </Button>
       </div>
-      <div className="overflow-x-auto">
-        <SyntaxHighlighter
-          language={language}
-          style={atomDark}
-          customStyle={{
-            margin: 0,
-            padding: "1rem",
-            background: "transparent",
-            fontSize: "1rem",
-          }}
-          showLineNumbers
-        >
-          {code}
-        </SyntaxHighlighter>
-      </div>
+      <div 
+        className="overflow-x-auto [&_pre]:m-0 [&_pre]:p-4 [&_pre]:bg-transparent"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
     </div>
   );
 }

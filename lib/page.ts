@@ -6,7 +6,6 @@ export interface DocPage {
 }
 
 export const docPages: DocPage[] = [
-  // Getting Started
   { 
     title: "Introduction", 
     slug: "introduction", 
@@ -22,10 +21,10 @@ export const docPages: DocPage[] = [
   
   // Components
   { 
-    title: "Normal Grid", 
-    slug: "normal-grid", 
+    title: "Masonry Grid", 
+    slug: "masonry-grid", 
     category: "Blocks",
-    description: "Basic grid component with fixed columns"
+    description: "Masonry grid for direct use"
   },
 
 ];

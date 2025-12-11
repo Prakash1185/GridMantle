@@ -9,7 +9,7 @@ export function PageHeader({ title, description }: PageHeaderProps) {
       <h1 className="scroll-m-20 text-3xl sm:text-4xl font-bold tracking-tight">
         {title}
       </h1>
-      <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+      <p className="text-base text-muted-foreground leading-relaxed">
         {description}
       </p>
     </div>
