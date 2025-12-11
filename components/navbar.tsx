@@ -26,48 +26,19 @@ const sidebarSections = [
     ],
   },
   {
-    title: "Components",
+    title: "Blocks",
     items: [
-      { title: "Grid Layouts", href: "/docs/grid-layouts" },
-      { title: "Responsive Grids", href: "/docs/responsive-grids" },
-      { title: "Custom Grids", href: "/docs/custom-grids" },
+      { title: "Masonry Grid", href: "/docs/masonry-grid" },
     ],
   },
-  {
-    title: "Examples",
-    items: [
-      { title: "Basic Examples", href: "/docs/basic-examples" },
-      { title: "Advanced Examples", href: "/docs/advanced-examples" },
-    ],
-  },
-  {
-    title: "Examples",
-    items: [
-      { title: "Basic Examples", href: "/docs/basic-examples" },
-      { title: "Advanced Examples", href: "/docs/advanced-examples" },
-    ],
-  },
-  {
-    title: "Examples",
-    items: [
-      { title: "Basic Examples", href: "/docs/basic-examples" },
-      { title: "Advanced Examples", href: "/docs/advanced-examples" },
-    ],
-  },
-  {
-    title: "Examples",
-    items: [
-      { title: "Basic Examples", href: "/docs/basic-examples" },
-      { title: "Advanced Examples", href: "/docs/advanced-examples" },
-    ],
-  },
+  
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between gap-4 border-b py-2.5 w-full px-4 md:px-36 border-dashed bg-background/80 z-50 sticky top-0 backdrop-blur-lg">
+    <nav className="flex items-center justify-between gap-4 border-b py-2.5 w-full px-4 lg:px-36 border-dashed bg-background/80 z-50 sticky top-0 backdrop-blur-lg">
       {/* LEFT GROUP - Menu + Logo */}
       <div className="flex items-center gap-2 md:gap-4 flex-shrink-0">
         {/* Mobile Drawer Toggle */}
@@ -87,7 +58,7 @@ const Navbar = () => {
 
             <div className=" space-y-6">
               {/* Navigation Links */}
-              <div className="space-y-3 pb-4 border-b">
+              <div className="space-y-1.5 pb-4 border-b">
                 <Link
                   href="/docs/introduction"
                   className="block text-sm font-medium hover:text-primary transition-colors py-2"
@@ -115,7 +86,7 @@ const Navbar = () => {
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="block text-sm text-muted-foreground hover:text-primary hover:bg-accent rounded-md px-2 py-1.5 transition-colors"
+                        className="block text-sm text-muted-foreground hover:text-primary hover:bg-accent rounded-md  py-1.5 transition-colors"
                         onClick={() => setIsOpen(false)}
                       >
                         {item.title}

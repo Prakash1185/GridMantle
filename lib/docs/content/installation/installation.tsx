@@ -24,8 +24,8 @@ export defaut function Home(){
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold tracking-tight">
-          <span className="px-3 py-1.5 border border-dashed mr-2 bg-primary/15 rounded-md text-primary">
+        <h2 className="text-xl font-semibold tracking-tighter sm:tracking-tight">
+          <span className="px-2 py-0.5 md:px-3 md:py-1.5 border border-dashed mr-2 bg-primary/15 rounded-md text-primary">
             1
           </span>
           Create a Next.js Project
@@ -37,8 +37,8 @@ export defaut function Home(){
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold tracking-tight">
-          <span className="px-3 py-1.5 border border-dashed mr-2 bg-primary/15 rounded-md text-primary">
+        <h2 className="text-xl font-semibold tracking-tighter sm:tracking-tight">
+          <span className="px-2 py-0.5 md:px-3 md:py-1.5 border border-dashed mr-2 bg-primary/15 rounded-md text-primary">
             2
           </span>
           Initialize Shadcn UI
@@ -50,8 +50,8 @@ export defaut function Home(){
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold tracking-tight">
-          <span className="px-3 py-1.5 border border-dashed mr-2 bg-primary/15 rounded-md text-primary">
+        <h2 className="text-xl font-semibold tracking-tighter sm:tracking-tight">
+          <span className="px-2 py-0.5 md:px-3 md:py-1.5 border border-dashed mr-2 bg-primary/15 rounded-md text-primary">
             3
           </span>
           Add GridMantle Block
@@ -63,8 +63,8 @@ export defaut function Home(){
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold tracking-tight">
-          <span className="px-3 py-1.5 border border-dashed mr-2 bg-primary/15 rounded-md text-primary">
+        <h2 className="text-xl font-semibold tracking-tighter sm:tracking-tight">
+          <span className="px-2 py-0.5 md:px-3 md:py-1.5 border border-dashed mr-2 bg-primary/15 rounded-md text-primary">
             4
           </span>
           Import and use the components
