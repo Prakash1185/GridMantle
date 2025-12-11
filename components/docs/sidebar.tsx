@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { categories, getPagesByCategory } from "@/lib/docs/page";
+import { categories, getPagesByCategory } from "@/lib/page";
 
 export function DocsSidebar() {
   const pathname = usePathname();
@@ -21,9 +21,9 @@ export function DocsSidebar() {
                 key={page.slug}
                 href={`/docs/${page.slug}`}
                 className={cn(
-                  "group flex w-full items-center rounded-md px-2 py-1.5 hover:bg-accent hover:text-accent-foreground transition-colors",
+                  "group flex w-full items-center rounded-md px-2 py-1.5 hover:bg-primary/20 hover:text-primary transition-colors",
                   pathname === `/docs/${page.slug}`
-                    ? "bg-accent text-accent-foreground font-medium"
+                    ? "bg-primary/20 text-primary font-medium"
                     : "text-muted-foreground"
                 )}
               >

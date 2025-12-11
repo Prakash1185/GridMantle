@@ -1,11 +1,10 @@
-import { docPages } from "./docs/page";
-import { blockComponents } from "./blocks/content";
+import { docPages } from "./page";
 
 export interface SearchItem {
   title: string;
   description?: string;
   href: string;
-  category: "Getting Started" | "Components" | "Pages" | "Blocks";
+  category: "Getting Started" | "Components" | "Pages";
 }
 
 export const searchData: SearchItem[] = [
@@ -18,24 +17,15 @@ export const searchData: SearchItem[] = [
   },
   {
     title: "Blocks",
-    description: "Live preview of all grid components",
+    description: "Browse all available grid blocks",
     href: "/blocks",
     category: "Pages",
   },
   
-  // Dynamic doc pages
+  // Dynamic doc pages from docPages array
   ...docPages.map((page) => ({
     title: page.title,
-    // description: page.description,
     href: `/docs/${page.slug}`,
     category: page.category as "Getting Started" | "Components",
   })),
-  
-  // // Dynamic block pages (redirects to docs)
-  // ...blockComponents.map((block) => ({
-  //   title: `${block.name} Block`,
-  //   // description: block.content.description,
-  //   href: `/docs/${block.slug}`,
-  //   category: "Blocks" as const,
-  // })),
 ];
