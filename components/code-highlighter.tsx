@@ -56,7 +56,7 @@ export function CodeHighlight({ code, language = "tsx" }: CodeHighlightProps) {
   }
 
   return (
-    <div className="relative rounded-lg border overflow-hidden">
+    <div className="relative rounded-lg border overflow-hidden bg-[#ffffff] dark:bg-[#0d1117]">
       <div className="flex items-center justify-end px-4 py-2 border-b bg-muted/80 dark:bg-muted/80">
         <Button
           size="sm"
@@ -72,9 +72,10 @@ export function CodeHighlight({ code, language = "tsx" }: CodeHighlightProps) {
         </Button>
       </div>
       <div 
-        className="overflow-x-auto [&_pre]:m-0 [&_pre]:p-4 [&_pre]:bg-transparent"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
+        className="overflow-x-auto [&_pre]:m-0 [&_pre]:p-4 [&_pre]:bg-transparent [&_pre]:!bg-transparent"
+      >
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+      </div>
     </div>
   );
 }

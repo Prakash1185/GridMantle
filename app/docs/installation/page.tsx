@@ -12,10 +12,20 @@ export default function InstallationPage() {
 
       <InstallationContent />
 
-      <NextPrev
-        prev={null}
-        next={{ title: "Masonry Grid", slug: "masonry-grid", category: "Blocks" }}
-      />
+      <div className=" ">
+        <NextPrev
+          prev={{
+            title: "Introduction",
+            slug: "introduction",
+            category: "Getting Started",
+          }}
+          next={{
+            title: "Masonry Grid",
+            slug: "masonry-grid",
+            category: "Blocks",
+          }}
+        />
+      </div>
     </div>
   );
 }

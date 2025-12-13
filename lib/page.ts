@@ -6,33 +6,35 @@ export interface DocPage {
 }
 
 export const docPages: DocPage[] = [
-  { 
-    title: "Introduction", 
-    slug: "introduction", 
+  {
+    title: "Introduction",
+    slug: "introduction",
     category: "Getting Started",
-    description: "Get started with GridMantle"
+    description: "Get started with GridMantle",
   },
-  { 
-    title: "Installation", 
-    slug: "installation", 
+  {
+    title: "Installation",
+    slug: "installation",
     category: "Getting Started",
-    description: "Install GridMantle in your project"
+    description: "Install GridMantle in your project",
   },
-  
+
   // Components
-  { 
-    title: "Masonry Grid", 
-    slug: "masonry-grid", 
+  {
+    title: "Column Grid",
+    slug: "column-grid",
     category: "Blocks",
-    description: "Masonry grid for direct use"
+    description: "Column grid for direct use",
   },
-
+  {
+    title: "Column Grid",
+    slug: "column-grid",
+    category: "Components",
+    description: "Responsive grid with fixed columns",
+  },
 ];
 
-export const categories = [
-  "Getting Started",
-  "Blocks",
-];
+export const categories = ["Getting Started", "Blocks"];
 
 export function getPagesByCategory(category: string): DocPage[] {
   return docPages.filter((page) => page.category === category);

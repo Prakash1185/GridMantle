@@ -21,7 +21,13 @@ export const searchData: SearchItem[] = [
     href: "/blocks",
     category: "Pages",
   },
-  
+  {
+    title: "Column Grid",
+    description: "Responsive grid with fixed columns",
+    href: "/docs/column-grid",
+    category: "Components",
+  },
+
   // Dynamic doc pages from docPages array
   ...docPages.map((page) => ({
     title: page.title,
