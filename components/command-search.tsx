@@ -1,7 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { useRouter } from "next/navigation";
+import { Search } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import {
   CommandDialog,
   CommandEmpty,
@@ -10,8 +11,8 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
-import { searchData, SearchItem } from "@/lib/search-data";
-import { Search, FileText, Home, Grid } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { categories, getPagesByCategory } from "@/lib/page";
 
 export function CommandSearch() {
   const [open, setOpen] = React.useState(false);
@@ -29,74 +30,51 @@ export function CommandSearch() {
     return () => document.removeEventListener("keydown", down);
   }, []);
 
-  const runCommand = React.useCallback((command: () => void) => {
+  const handleSelect = (slug: string) => {
     setOpen(false);
-    command();
-  }, []);
-
-  const getIcon = (category: SearchItem["category"]) => {
-    switch (category) {
-      case "Getting Started":
-        return <FileText className="mr-2 h-4 w-4" />;
-      case "Components":
-        return <Grid className="mr-2 h-4 w-4" />;
-      case "Pages":
-        return <Home className="mr-2 h-4 w-4" />;
-    }
+    router.push(`/docs/${slug}`);
   };
-
-  // Group items by category
-  const groupedData = searchData.reduce((acc, item) => {
-    if (!acc[item.category]) {
-      acc[item.category] = [];
-    }
-    acc[item.category].push(item);
-    return acc;
-  }, {} as Record<string, SearchItem[]>);
 
   return (
     <>
-      {/* Desktop Search Bar - Full Width */}
-      <button
+      <Button
+        variant="outline"
+        className="relative h-9 w-full justify-start text-sm text-muted-foreground sm:w-40 md:w-64"
         onClick={() => setOpen(true)}
-        className="hidden md:inline-flex items-center justify-between rounded-md border-2 px-3 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-accent-foreground transition-colors w-full space-x-3"
       >
-        <div className="flex items-center gap-2">
-          <Search className="h-4 w-4" />
-          <span className="hidden md:inline">Search documentation...</span>
-          <span className="md:hidden">Search...</span>
-        </div>
-        <kbd className="pointer-events-none hidden sm:inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
+        <Search className="mr-2 h-4 w-4" />
+        <span className="hidden sm:inline">Search docs...</span>
+        <span className="sm:hidden">Search...</span>
+        <kbd className="pointer-events-none absolute right-2 hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
           <span className="text-xs">⌘</span>K
         </kbd>
-      </button>
+      </Button>
 
       <CommandDialog open={open} onOpenChange={setOpen}>
-        <CommandInput placeholder="Type a command or search..." />
+        <CommandInput placeholder="Search documentation..." />
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
-          {Object.entries(groupedData).map(([category, items]) => (
-            <CommandGroup key={category} heading={category} className="">
-              {items.map((item) => (
-                <CommandItem
-                  key={item.href}
-                  value={item.title}
-                  onSelect={() => {
-                    runCommand(() => router.push(item.href));
-                  }}
-                  className=""
-                >
-                  {getIcon(item.category as SearchItem["category"])}
-                  <div className="flex flex-col">
-                    <span className="font-medium">{item.title}</span>
-                    <span className="text-xs text-muted-foreground">
-                      {item.description}
-                    </span>
-                  </div>
-                </CommandItem>
-              ))}
-            </CommandGroup>
-          ))}
+          {categories.map((category) => {
+            const pages = getPagesByCategory(category);
+            return (
+              <CommandGroup key={category} heading={category}>
+                {pages.map((page) => (
+                  <CommandItem
+                    key={page.slug}
+                    onSelect={() => handleSelect(page.slug)}
+                    className="cursor-pointer"
+                  >
+                    <span className="font-medium">{page.title}</span>
+                    {page.description && (
+                      <span className="ml-2 text-xs text-muted-foreground">
+                        {page.description}
+                      </span>
+                    )}
+                  </CommandItem>
+                ))}
+              </CommandGroup>
+            );
+          })}
         </CommandList>
       </CommandDialog>
     </>

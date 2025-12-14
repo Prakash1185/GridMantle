@@ -15,7 +15,7 @@ export function NextPrev({ prev, next }: NextPrevProps) {
         <Button variant="outline" asChild className="flex-1 max-w-[200px] ">
           <Link href={`/docs/${prev.slug}`} className="flex items-center gap-2">
             <ChevronLeft className="h-4 w-4" />
-            <div className="sm:flex  flex-col items-start gap-0.5 hidden">
+            <div className="flex  flex-col items-start gap-0.5">
               {/* <span className="text-xs text-muted-foreground">Previous</span> */}
               <span className="font-medium text-sm">{prev.title}</span>
             </div>
@@ -31,7 +31,7 @@ export function NextPrev({ prev, next }: NextPrevProps) {
             href={`/docs/${next.slug}`}
             className="flex items-center gap-2 ml-auto"
           >
-            <div className="sm:flex hidden flex-col items-end gap-0.5">
+            <div className="flex flex-col items-end gap-0.5">
               {/* <span className="text-xs text-muted-foreground">Next</span> */}
               <span className="font-medium text-sm">{next.title}</span>
             </div>

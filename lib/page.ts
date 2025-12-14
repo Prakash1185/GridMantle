@@ -24,14 +24,9 @@ export const docPages: DocPage[] = [
     title: "Column Grid",
     slug: "column-grid",
     category: "Blocks",
-    description: "Column grid for direct use",
+    description: "Responsive column grid with animations",
   },
-  {
-    title: "Column Grid",
-    slug: "column-grid",
-    category: "Components",
-    description: "Responsive grid with fixed columns",
-  },
+
 ];
 
 export const categories = ["Getting Started", "Blocks"];
@@ -42,4 +37,15 @@ export function getPagesByCategory(category: string): DocPage[] {
 
 export function getAllPages(): DocPage[] {
   return docPages;
+}
+
+// Helper to generate sidebar sections
+export function getSidebarSections() {
+  return categories.map((category) => ({
+    title: category,
+    items: getPagesByCategory(category).map((page) => ({
+      title: page.title,
+      href: `/docs/${page.slug}`,
+    })),
+  }));
 }
