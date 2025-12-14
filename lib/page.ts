@@ -26,6 +26,12 @@ export const docPages: DocPage[] = [
     category: "Blocks",
     description: "Responsive column grid with animations",
   },
+  {
+    title: "Auto Fill Grid",
+    slug: "auto-fill-grid",
+    category: "Blocks",
+    description: "Grid that auto-adjusts columns based on width",
+  },
 
 ];
 

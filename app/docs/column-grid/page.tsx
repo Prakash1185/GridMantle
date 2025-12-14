@@ -25,8 +25,8 @@ export default function ColumnGridPage() {
             category: "Getting Started",
           }}
           next={{
-            title: "Masonry Grid",
-            slug: "masonry-grid",
+            title: "Auto Fill Grid",
+            slug: "auto-fill-grid",
             category: "Blocks",
           }}
         />

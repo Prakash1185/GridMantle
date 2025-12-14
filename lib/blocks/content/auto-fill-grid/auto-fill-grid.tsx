@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { CodeBlock } from "@/components/docs/code-block";
 import { DemoPreview } from "@/components/demos/demo-preview";
-import { ColumnGridPreview } from "./preview";
+import { useComponentSource } from "@/lib/hooks/use-component-source";
 import { Terminal, FileCode } from "lucide-react";
 import {
   Table,
@@ -13,29 +13,28 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { columnGridProps } from "./props-data";
-import { useComponentSource } from "@/lib/hooks/use-component-source";
+import { AutoFillGridDemo } from "./auto-fill-demo";
+import { autoFillGridProps } from "./props-data";
 import GithubFooterText from "@/components/github-footer-text";
 
-const ColumnGridContent = () => {
+const AutoFillGridContent = () => {
   const [installTab, setInstallTab] = useState<"cli" | "manual">("cli");
 
   // Fetch component source dynamically
-  const { code: componentCode, loading: componentLoading } = useComponentSource(
-    "components/ui/column-grid.tsx"
-  );
+  const { code: componentCode, loading: componentLoading } =
+    useComponentSource("components/ui/auto-fill-grid.tsx");
 
-  // Fetch preview code dynamically
+  // Fetch demo code dynamically - FIXED PATH
   const { code: previewCode, loading: previewLoading } = useComponentSource(
-    "lib/blocks/content/column-grid/preview.tsx"
+    "lib/blocks/content/auto-fill-grid/auto-fill-demo.tsx"
   );
 
   // Fetch usage code dynamically
   const { code: usageCode, loading: usageLoading } = useComponentSource(
-    "lib/blocks/content/column-grid/usage.tsx"
+    "lib/blocks/content/auto-fill-grid/usage.tsx"
   );
 
-  const cliCommand = `npx shadcn@latest add @gridmantle/column-grid`;
+  const cliCommand = `npx shadcn@latest add @gridmantle/auto-fill-grid`;
   const installDeps = `npm install framer-motion`;
 
   return (
@@ -50,7 +49,7 @@ const ColumnGridContent = () => {
             </div>
           </div>
         ) : (
-          <DemoPreview preview={<ColumnGridPreview />} code={previewCode} />
+          <DemoPreview preview={<AutoFillGridDemo />} code={previewCode} />
         )}
       </section>
 
@@ -109,7 +108,7 @@ const ColumnGridContent = () => {
                   <p className="text-xs text-muted-foreground">
                     Save as{" "}
                     <code className="px-1.5 py-0.5 rounded bg-muted">
-                      components/ui/column-grid.tsx
+                      components/ui/auto-fill-grid.tsx
                     </code>
                   </p>
                 </>
@@ -135,47 +134,46 @@ const ColumnGridContent = () => {
       </section>
 
       {/* Props Table - Constrained Width */}
-      <section className="space-y-4 max-w-4xl">
-        <h2 className="text-2xl font-semibold tracking-tight">Props</h2>
-        <div className="border  rounded-xl overflow-hidden">
-          <Table>
-            <TableHeader>
-              <TableRow className="bg-muted/50">
-                <TableHead className="font-semibold ">Name</TableHead>
-                <TableHead className="font-semibold ">Type</TableHead>
-                <TableHead className="font-semibold ">Default</TableHead>
-                <TableHead className="font-semibold">Description</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {columnGridProps.map((row) => (
-                <TableRow key={row.prop} className="hover:bg-muted/30">
-                  <TableCell className="font-mono text-sm font-medium">
-                    {row.prop}
-                  </TableCell>
-                  <TableCell className="font-mono text-sm font-medium">
-                    {row.type}
-                  </TableCell>
+     <section className="space-y-4 max-w-4xl">
+             <h2 className="text-2xl font-semibold tracking-tight">Props</h2>
+             <div className="border  rounded-xl overflow-hidden">
+               <Table>
+                 <TableHeader>
+                   <TableRow className="bg-muted/50">
+                     <TableHead className="font-semibold ">Name</TableHead>
+                     <TableHead className="font-semibold ">Type</TableHead>
+                     <TableHead className="font-semibold ">Default</TableHead>
+                     <TableHead className="font-semibold">Description</TableHead>
+                   </TableRow>
+                 </TableHeader>
+                 <TableBody>
+                   {autoFillGridProps.map((row) => (
+                     <TableRow key={row.prop} className="hover:bg-muted/30">
+                       <TableCell className="font-mono text-sm font-medium">
+                         {row.prop}
+                       </TableCell>
+                       <TableCell className="font-mono text-sm font-medium">
+                         {row.type}
+                       </TableCell>
+     
+                       <TableCell>
+                         <code className="text-xs px-2 py-0.5 rounded bg-muted">
+                           {row.default}
+                         </code>
+                       </TableCell>
+                       <TableCell className="text-sm text-muted-foreground">
+                         {row.description}
+                       </TableCell>
+                     </TableRow>
+                   ))}
+                 </TableBody>
+               </Table>
+             </div>
+           </section> 
 
-                  <TableCell>
-                    <code className="text-xs px-2 py-0.5 rounded bg-muted">
-                      {row.default}
-                    </code>
-                  </TableCell>
-                  <TableCell className="text-sm text-muted-foreground">
-                    {row.description}
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
-      </section>
-
-      {/* Footer - Constrained Width */}
       <GithubFooterText/>
     </div>
   );
 };
 
-export default ColumnGridContent;
+export default AutoFillGridContent;
