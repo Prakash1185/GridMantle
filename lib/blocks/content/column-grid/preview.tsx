@@ -45,40 +45,9 @@ export function ColumnGridPreview() {
             />
           </div>
 
-          {/* Bottom Info Bar */}
-          <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-            <div className="flex items-center justify-between text-white">
-              <div className="flex items-center gap-2">
-                
-                <span className="text-sm font-medium">Product {index + 1}</span>
-              </div>
-              <motion.div
-                whileHover={{ scale: 1.1, rotate: 15 }}
-                className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center cursor-pointer"
-              >
-                <svg
-                  className="w-4 h-4 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
-                </svg>
-              </motion.div>
-            </div>
-          </div>
+          
 
-          {/* Corner Badge */}
-          <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <div className="bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-semibold text-gray-900 shadow-lg">
-              New
-            </div>
-          </div>
+          
 
           {/* Border Glow Effect */}
           <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-white/30 transition-colors duration-500 pointer-events-none" />
