@@ -41,7 +41,7 @@ export function DemoPreview({ preview, code, language = "tsx" }: DemoPreviewProp
       </div>
 
       {activeTab === "preview" ? (
-        <div className="border rounded-xl p-4 sm:p-6 lg:p-8 bg-gradient-to-br from-muted/30 to-muted/10 max-h-[600px] overflow-y-auto">
+        <div className="border rounded-xl p-4 sm:p-6  bg-gradient-to-br from-muted/30 to-muted/10 max-h-[600px] overflow-y-auto">
           {preview}
         </div>
       ) : (
