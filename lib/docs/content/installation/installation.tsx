@@ -1,12 +1,11 @@
 import { CodeBlock } from "@/components/docs/code-block";
-import Link from "next/link";
 
 const InstallationContent = () => {
   const createNextApp = `npx create-next-app@latest`;
 
   const installShadcn = `npx shadcn@latest init`;
 
-  const blocksAdd = `npx shadcn@latest add @gridmantle/column-grid`;
+  const blocksAdd = `npx shadcn@latest add https://gridmantle.vercel.app/r/column-grid.json`;
 
   const importExample = `import { ColumnGrid } from "@/components/ui/column-grid";
   
