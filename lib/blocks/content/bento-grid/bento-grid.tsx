@@ -35,7 +35,7 @@ const BentoGridContent = () => {
     "lib/blocks/content/bento-grid/usage.tsx"
   );
 
-  const cliCommand = `npx shadcn@latest add https://gridmantle.vercel.app/r/bento.json`;
+  const cliCommand = `npx shadcn@latest add https://gridmantle.vercel.app/r/bento-grid.json`;
   const installDeps = `npm install framer-motion @remixicon/react`;
 
   return (
