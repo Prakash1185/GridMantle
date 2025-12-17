@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⬢ GridMantle
+# GridMantle
 
 ![GridMantle Banner](/public/gridmantle.png)
 
