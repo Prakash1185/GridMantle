@@ -15,6 +15,49 @@
 
 </div>
 
+---
+
+## About GridMantle
+
+GridMantle provides clean, reusable grid layouts and blocks that developers can copy and use directly in their projects.
+
+### Key Features
+
+- **Simple, ready-to-use grid blocks** — Copy, paste, and customize
+- **Clean and responsive components** — Works on all devices
+- **Flexible layouts with customization** — Adapt to your design needs
+- **Built with modern stack** — Next.js, React, Tailwind CSS, Framer Motion
+
+---
+
+## Development
+
+This project is still growing. The focus right now is on developing more grid components and improving existing ones.
+
+GridMantle is a collection of grid layout blocks and components designed to help you build modern grid-based UI faster.
+
+---
+
+## Tech Stack
+
+- **Next.js 16** 
+- **React 19**
+- **Tailwind CSS 4**
+- **Framer Motion** 
+- **shadcn/ui**
+
+---
+
+## Available Blocks
+
+- Bento Grid
+- Bento Grid 2
+- Column Grid
+- Auto Fill Grid
+- Services Grid
+- Pinterest Grid
+- Testimonials Grid
+- Testimonials Grid 2
 
 ---
 
