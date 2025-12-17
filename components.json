@@ -19,7 +19,7 @@
     "hooks": "@/hooks"
   },
   "registries": {
-    "gridmantle":{
+    "@gridmantle":{
       "url":"https://gridmantle.vercel.app/r"
     }
   }
