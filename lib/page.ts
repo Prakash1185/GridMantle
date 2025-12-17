@@ -18,8 +18,6 @@ export const docPages: DocPage[] = [
     category: "Getting Started",
     description: "Install GridMantle in your project",
   },
-
-  // Components
   {
     title: "Column Grid",
     slug: "column-grid",
@@ -36,50 +34,43 @@ export const docPages: DocPage[] = [
     title: "Services Grid",
     slug: "services-grid",
     category: "Blocks",
-    description:
-      "A n*n even layout based responsive services grid for listing out your features",
+    description: "A responsive services grid for listing features",
   },
   {
     title: "Bento Grid",
     slug: "bento-grid",
     category: "Blocks",
-    description:
-      "A n*n even layout based responsive services grid for listing out your features",
+    description: "A flexible bento-style grid layout component",
   },
   {
     title: "Bento Grid 2",
     slug: "bento-grid-2",
     category: "Blocks",
-    description:
-      "A n*n even layout based responsive services grid for listing out your features",
+    description: "An alternate bento-style grid with different layout options",
   },
   {
     title: "Pinterest Grid",
     slug: "pinterest-grid",
     category: "Blocks",
-    description:
-      "A n*n even layout based responsive services grid for listing out your features",
+    description: "Masonry-style pinterest grid layout",
   },
   {
     title: "Testimonials Grid",
     slug: "testimonials-grid",
     category: "Blocks",
-    description:
-      "A n*n even layout based responsive services grid for listing out your features",
+    description: "Horizontal scrolling testimonials grid with video support",
   },
   {
     title: "Testimonials Grid 2",
     slug: "testimonials-grid-2",
     category: "Blocks",
-    description:
-      "A n*n even layout based responsive services grid for listing out your features",
+    description: "Vertical scrolling testimonials grid with video support",
   },
   {
     title: "Contribute",
     slug: "contribute",
     category: "Extras",
-    description:
-      "A n*n even layout based responsive services grid for listing out your features",
+    description: "Learn how to contribute to GridMantle",
   },
 ];
 

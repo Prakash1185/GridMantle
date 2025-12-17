@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "auto-fill-grid",
+  "type": "registry:ui",
+  "title": "Auto Fill Grid",
+  "description": "Grid that auto-adjusts columns based on width",
+  "dependencies": [
+    "framer-motion"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "components/ui/auto-fill-grid.tsx",
+      "type": "registry:ui",
+      "target": "components/ui/auto-fill-grid.tsx",
+      "content": "\"use client\";\r\n\r\nimport React from \"react\";\r\nimport { motion } from \"framer-motion\";\r\nimport { cn } from \"@/lib/utils\";\r\n\r\ninterface AutoFillGridProps {\r\n  children: React.ReactNode;\r\n  minItemWidth?: number;\r\n  gap?: number;\r\n  className?: string;\r\n  animate?: boolean;\r\n}\r\n\r\nexport function AutoFillGrid({\r\n  children,\r\n  minItemWidth = 280,\r\n  gap = 6,\r\n  className,\r\n  animate = true,\r\n}: AutoFillGridProps) {\r\n  const Container = animate ? motion.div : \"div\";\r\n\r\n  const getGapClass = (gapValue: number) => {\r\n    const gapMap: Record<number, string> = {\r\n      0: \"gap-0\",\r\n      1: \"gap-1\",\r\n      2: \"gap-2\",\r\n      3: \"gap-3\",\r\n      4: \"gap-4\",\r\n      5: \"gap-5\",\r\n      6: \"gap-6\",\r\n      7: \"gap-7\",\r\n      8: \"gap-8\",\r\n      10: \"gap-10\",\r\n      12: \"gap-12\",\r\n    };\r\n    return gapMap[gapValue] || \"gap-6\";\r\n  };\r\n\r\n  return (\r\n    <Container\r\n      style={{\r\n        display: \"grid\",\r\n        gridTemplateColumns: `repeat(auto-fill, minmax(min(${minItemWidth}px, 100%), 1fr))`,\r\n      }}\r\n      className={cn(\"w-full will-change\", getGapClass(gap), className)}\r\n      {...(animate && {\r\n        initial: \"hidden\",\r\n        animate: \"visible\",\r\n        variants: {\r\n          hidden: { opacity: 0 },\r\n          visible: {\r\n            opacity: 1,\r\n            transition: {\r\n              staggerChildren: 0.05,\r\n              delayChildren: 0.1,\r\n            },\r\n          },\r\n        },\r\n      })}\r\n    >\r\n      {React.Children.map(children, (child, index) =>\r\n        animate ? (\r\n          <motion.div\r\n            key={index}\r\n            variants={{\r\n              hidden: {\r\n                opacity: 0,\r\n                scale: 0.9,\r\n                y: 20,\r\n              },\r\n              visible: {\r\n                opacity: 1,\r\n                scale: 1,\r\n                y: 0,\r\n                transition: {\r\n                  type: \"spring\",\r\n                  stiffness: 100,\r\n                  damping: 15,\r\n                  mass: 0.5,\r\n                },\r\n              },\r\n            }}\r\n          >\r\n            {child}\r\n          </motion.div>\r\n        ) : (\r\n          child\r\n        )\r\n      )}\r\n    </Container>\r\n  );\r\n}"
+    }
+  ]
+}

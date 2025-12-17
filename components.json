@@ -18,5 +18,9 @@
     "lib": "@/lib",
     "hooks": "@/hooks"
   },
-  "registries": {}
+  "registries": {
+    "gridmantle":{
+      "url":"https://gridmantle.vercel.app/r"
+    }
+  }
 }

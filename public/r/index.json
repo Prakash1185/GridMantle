@@ -1,0 +1,97 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "gridmantle",
+  "homepage": "https://gridmantle.vercel.app",
+  "items": [
+    {
+      "name": "column-grid",
+      "type": "registry:ui",
+      "title": "Column Grid",
+      "description": "Responsive column grid with animations",
+      "dependencies": [
+        "framer-motion"
+      ],
+      "devDependencies": [],
+      "registryDependencies": []
+    },
+    {
+      "name": "auto-fill-grid",
+      "type": "registry:ui",
+      "title": "Auto Fill Grid",
+      "description": "Grid that auto-adjusts columns based on width",
+      "dependencies": [
+        "framer-motion"
+      ],
+      "devDependencies": [],
+      "registryDependencies": []
+    },
+    {
+      "name": "services-grid",
+      "type": "registry:ui",
+      "title": "Services Grid",
+      "description": "A responsive services grid for listing features",
+      "dependencies": [
+        "framer-motion"
+      ],
+      "devDependencies": [],
+      "registryDependencies": []
+    },
+    {
+      "name": "bento-grid",
+      "type": "registry:ui",
+      "title": "Bento Grid",
+      "description": "A flexible bento-style grid layout component",
+      "dependencies": [
+        "framer-motion"
+      ],
+      "devDependencies": [],
+      "registryDependencies": []
+    },
+    {
+      "name": "bento-grid-2",
+      "type": "registry:ui",
+      "title": "Bento Grid 2",
+      "description": "An alternate bento-style grid with different layout options",
+      "dependencies": [
+        "framer-motion"
+      ],
+      "devDependencies": [],
+      "registryDependencies": []
+    },
+    {
+      "name": "pinterest-grid",
+      "type": "registry:ui",
+      "title": "Pinterest Grid",
+      "description": "Masonry-style pinterest grid layout",
+      "dependencies": [
+        "framer-motion"
+      ],
+      "devDependencies": [],
+      "registryDependencies": []
+    },
+    {
+      "name": "testimonials-grid",
+      "type": "registry:ui",
+      "title": "Testimonials Grid",
+      "description": "Horizontal scrolling testimonials grid with video support",
+      "dependencies": [
+        "framer-motion",
+        "@remixicon/react"
+      ],
+      "devDependencies": [],
+      "registryDependencies": []
+    },
+    {
+      "name": "testimonials-grid-2",
+      "type": "registry:ui",
+      "title": "Testimonials Grid 2",
+      "description": "Vertical scrolling testimonials grid with video support",
+      "dependencies": [
+        "framer-motion",
+        "@remixicon/react"
+      ],
+      "devDependencies": [],
+      "registryDependencies": []
+    }
+  ]
+}
