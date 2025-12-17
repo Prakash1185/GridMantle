@@ -1,21 +1,15 @@
-import React from "react";
-import Link from "next/link";
 import { PageHeader } from "@/components/docs/page-header";
-import { Button } from "@/components/ui/button";
-import { RiArrowRightUpLine } from "@remixicon/react";
 
 const ContributePage = () => {
-  const email = "your@email.com"; // Replace with your email
+  const email = "prakashh.official221@gmail.com";
 
   return (
     <div className="space-y-8 max-w-4xl">
-      {/* Header */}
       <PageHeader
         title="Contribute"
         description="GridMantle is open source and we welcome contributions from the community."
       />
 
-      {/* Why Contribute */}
       <section className="space-y-2">
         <h2 className="text-xl font-semibold tracking-tight">
           Why Contribute?
@@ -27,7 +21,6 @@ const ContributePage = () => {
         </p>
       </section>
 
-      {/* How to Contribute */}
       <section className="space-y-2">
         <h2 className="text-xl font-semibold tracking-tight">
           How to Contribute
@@ -40,7 +33,7 @@ const ContributePage = () => {
           <li>
             Clone it locally:{" "}
             <code className="px-1.5 py-0.5 rounded bg-muted text-sm">
-              git clone https://github.com/yourusername/gridmantle.git
+              git clone https://github.com/Prakash1185/GridMantle.git
             </code>
           </li>
           <li>
@@ -55,7 +48,6 @@ const ContributePage = () => {
         </ol>
       </section>
 
-      {/* Guidelines */}
       <section className="space-y-2">
         <h2 className="text-xl font-semibold tracking-tight">Guidelines</h2>
         <ul className="list-disc list-inside space-y-2 text-muted-foreground">
@@ -67,45 +59,22 @@ const ContributePage = () => {
         </ul>
       </section>
 
-      {/* CTA Buttons */}
-      <div className="space-x-1.5 sm:space-x-2.5 py-4">
-        <Link href="https://github.com/yourusername/gridmantle" target="_blank">
-          <Button className="rounded-lg cursor-pointer">
-            View on GitHub{" "}
-            <span className="bg-secondary/50 rounded-full p-0.5">
-              <RiArrowRightUpLine />
-            </span>
-          </Button>
-        </Link>
-        <Link
-          href="https://github.com/yourusername/gridmantle/issues"
-          target="_blank"
-        >
-          <Button className="rounded-lg cursor-pointer border-2 hover:bg-primary/10 bg-background text-foreground">
-            Open an Issue
-          </Button>
-        </Link>
-      </div>
+     
 
-      {/* Feedback */}
       <section className="space-y-2">
         <h2 className="text-xl font-semibold tracking-tight">Feedback</h2>
         <p className="text-muted-foreground md:leading-7">
           Have ideas, suggestions, or found a bug? We&apos;d love to hear from
           you. Your feedback helps us improve GridMantle and build better
-          components for everyone. Reach out at{" "}
+          components for everyone. Reach out{" "}
           <a
             href={`mailto:${email}`}
-            className="text-primary hover:underline font-medium"
+            className="text-primary hover:underline bg-primary/10 rounded-md font-medium"
           >
-            <code className="px-1.5 py-0.5 rounded bg-muted text-sm">
-              {email}
-            </code>
+            <code className="px-1.5 py-0.5  text-sm">Here</code>
           </a>
         </p>
       </section>
-
-     
     </div>
   );
 };

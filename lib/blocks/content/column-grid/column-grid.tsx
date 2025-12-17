@@ -20,17 +20,14 @@ import GithubFooterText from "@/components/github-footer-text";
 const ColumnGridContent = () => {
   const [installTab, setInstallTab] = useState<"cli" | "manual">("cli");
 
-  // Fetch component source dynamically
   const { code: componentCode, loading: componentLoading } = useComponentSource(
     "components/ui/column-grid.tsx"
   );
 
-  // Fetch preview code dynamically
   const { code: previewCode, loading: previewLoading } = useComponentSource(
     "lib/blocks/content/column-grid/preview.tsx"
   );
 
-  // Fetch usage code dynamically
   const { code: usageCode, loading: usageLoading } = useComponentSource(
     "lib/blocks/content/column-grid/usage.tsx"
   );
@@ -40,7 +37,7 @@ const ColumnGridContent = () => {
 
   return (
     <div className="space-y-12">
-      {/* Preview Section - Full Width */}
+      {/* Preview Section  */}
       <section className="w-full">
         {previewLoading ? (
           <div className="border rounded-lg p-8 flex items-center justify-center bg-muted/30">
@@ -54,7 +51,7 @@ const ColumnGridContent = () => {
         )}
       </section>
 
-      {/* Installation Section - Constrained Width */}
+      {/* Installation Section   */}
       <section className="space-y-4 max-w-4xl">
         <h2 className="text-2xl font-semibold tracking-tight">Installation</h2>
 
@@ -119,7 +116,7 @@ const ColumnGridContent = () => {
         )}
       </section>
 
-      {/* Usage Section - Constrained Width */}
+      {/* Usage Section */}
       <section className="space-y-4 max-w-4xl">
         <h2 className="text-2xl font-semibold tracking-tight">Usage</h2>
         {usageLoading ? (
@@ -134,7 +131,7 @@ const ColumnGridContent = () => {
         )}
       </section>
 
-      {/* Props Table - Constrained Width */}
+      {/* Props Table  */}
       <section className="space-y-4 max-w-4xl">
         <h2 className="text-2xl font-semibold tracking-tight">Props</h2>
         <div className="border  rounded-xl overflow-hidden">
@@ -172,7 +169,7 @@ const ColumnGridContent = () => {
         </div>
       </section>
 
-      {/* Footer - Constrained Width */}
+      {/* Footer */}
       <GithubFooterText/>
     </div>
   );

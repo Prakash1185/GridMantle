@@ -5,7 +5,6 @@ import AutoFillGridContent from "@/lib/blocks/content/auto-fill-grid/auto-fill-g
 export default function AutoFillGridPage() {
   return (
     <div className="space-y-10">
-      {/* Header with constrained width */}
       <div className="max-w-4xl">
         <PageHeader
           title="Auto Fill Grid"
@@ -13,10 +12,8 @@ export default function AutoFillGridPage() {
         />
       </div>
 
-      {/* Content - Full width for previews */}
       <AutoFillGridContent />
 
-      {/* Footer with constrained width */}
       <div className="max-w-4xl mt-10">
         <NextPrev
           prev={{

@@ -87,7 +87,7 @@ export function ServicesGridDemo() {
                 {service.description}
               </p>
 
-              {/* Arrow - appears on hover */}
+              {/* Arrow  */}
               <div className="mt-4 flex items-center gap-1.5 text-sm text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <span>Learn more</span>
                 <svg

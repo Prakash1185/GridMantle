@@ -1,6 +1,5 @@
 import { PinterestGrid, PinterestCard } from "@/components/ui/pinterest-grid";
 
-// Just paste any image URL - no need for height params!
 const images = [
   {
     src: "https://images.unsplash.com/photo-1549298916-b41d501d3772",
@@ -13,7 +12,6 @@ const images = [
     alt: "Running shoes",
     title: "Sport Sneakers",
   },
-  // Add more images...
 ];
 
 export default function MyPage() {

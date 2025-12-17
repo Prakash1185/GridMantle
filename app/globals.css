@@ -42,12 +42,10 @@
 }
 
 
-/* ---------------- LIGHT MODE ---------------- */
 
 :root {
   --radius: 0.625rem;
 
-  /* Clean and neutral */
   --background: #fafafa;
   --foreground: #0b0f0f;
 
@@ -57,17 +55,16 @@
   --popover: #ffffff;
   --popover-foreground: #0b0f0f;
 
-  /* TEAL PRIMARY SYSTEM */
-  --primary: #0d9488;               /* teal-600 */
+  --primary: #0d9488;               
   --primary-foreground: #ffffff;
 
-  --secondary: #0f766e;             /* teal-700 */
+  --secondary: #0f766e;             
   --secondary-foreground: #ffffff;
 
-  --muted: #eef7f6;                 /* subtle grey-teal */
+  --muted: #eef7f6;                 
   --muted-foreground: #64748b;
 
-  --accent: #ccfbf1;                /* teal-100 */
+  --accent: #ccfbf1;                
   --accent-foreground: #0b0f0f;
 
   --destructive: #dc2626;
@@ -76,14 +73,12 @@
   --input: rgba(0,0,0,0.06);
   --ring: rgba(13,148,136,0.20);
 
-  /* Charts */
   --chart-1: #0f766e;
   --chart-2: #0d9488;
   --chart-3: #5eead4;
   --chart-4: #99f6e4;
   --chart-5: #ccfbf1;
 
-  /* Sidebar */
   --sidebar: #ffffff;
   --sidebar-foreground: #0b0f0f;
   --sidebar-primary: #0d9488;
@@ -95,30 +90,29 @@
 }
 
 
-/* ---------------- DARK MODE ---------------- */
 
 .dark {
-  /* Deep, neutral, modern dark */
-  --background: #0a0f11;           /* almost black with slight depth */
+
+  --background: #0a0f11;          
   --foreground: #e6f8f7;
 
-  --card: #101719;                 /* slight lift */
+  --card: #101719;               
   --card-foreground: #e6f8f7;
 
   --popover: #101719;
   --popover-foreground: #e6f8f7;
 
-  /* TEAL PRIMARY SYSTEM (dark mode tuned) */
-  --primary: #2dd4bf;              /* teal-400 */
+
+  --primary: #2dd4bf;              
   --primary-foreground: #251105;
 
-  --secondary: #0d9488;            /* teal-600 */
+  --secondary: #0d9488;            
   --secondary-foreground: #e6f8f7;
 
   --muted: #0e1517;
   --muted-foreground: #94a3b8;
 
-  --accent: #134e4a;               /* muted deep teal */
+  --accent: #134e4a;               
   --accent-foreground: #e6f8f7;
 
   --destructive: #f87171;
@@ -126,15 +120,12 @@
   --border: rgba(255,255,255,0.08);
   --input: rgba(255,255,255,0.05);
   --ring: rgba(45,212,191,0.22);
-
-  /* Charts */
   --chart-1: #2dd4bf;
   --chart-2: #0d9488;
   --chart-3: #5eead4;
   --chart-4: #0f766e;
   --chart-5: #134e4a;
 
-  /* Sidebar */
   --sidebar: #101719;
   --sidebar-foreground: #e6f8f7;
   --sidebar-primary: #2dd4bf;

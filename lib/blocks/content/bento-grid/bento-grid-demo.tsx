@@ -11,7 +11,6 @@ import {
 export function BentoGridDemo() {
   return (
     <BentoGrid className="lg:auto-rows-[280px]">
-      {/* Box 1 - Large, spans 2 cols on desktop */}
       <BentoCard
         title="AI-Powered Analytics"
         description="Harness the power of artificial intelligence to analyze your data and uncover hidden insights that drive growth."
@@ -21,7 +20,6 @@ export function BentoGridDemo() {
         className="md:col-span-2 lg:col-span-2 lg:row-span-1"
       />
 
-      {/* Box 2 - Tall, spans 2 rows on desktop */}
       <BentoCard
         title="Real-time Monitoring"
         description="Track your metrics in real-time with live dashboards. Get instant alerts when something needs your attention. Monitor performance across all your applications and services."
@@ -31,7 +29,6 @@ export function BentoGridDemo() {
         className="md:col-span-2 lg:col-span-1 lg:row-span-2 order-4 md:order-4 lg:order-2"
       />
 
-      {/* Box 3 - Small */}
       <BentoCard
         title="Lightning Fast"
         description="Optimized performance with sub-millisecond response times."
@@ -41,7 +38,6 @@ export function BentoGridDemo() {
         className="md:col-span-1 lg:col-span-1 order-2 md:order-2 lg:order-3"
       />
 
-      {/* Box 4 - Small */}
       <BentoCard
         title="Enterprise Security"
         description="Bank-grade encryption and compliance with industry standards."

@@ -60,7 +60,6 @@ export default function MyPage() {
         />
       </TestimonialColumn>
 
-      {/* Add more columns... */}
     </TestimonialsGrid>
   );
 }

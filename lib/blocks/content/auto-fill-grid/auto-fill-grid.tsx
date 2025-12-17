@@ -20,16 +20,13 @@ import GithubFooterText from "@/components/github-footer-text";
 const AutoFillGridContent = () => {
   const [installTab, setInstallTab] = useState<"cli" | "manual">("cli");
 
-  // Fetch component source dynamically
   const { code: componentCode, loading: componentLoading } =
     useComponentSource("components/ui/auto-fill-grid.tsx");
 
-  // Fetch demo code dynamically - FIXED PATH
   const { code: previewCode, loading: previewLoading } = useComponentSource(
     "lib/blocks/content/auto-fill-grid/auto-fill-demo.tsx"
   );
 
-  // Fetch usage code dynamically
   const { code: usageCode, loading: usageLoading } = useComponentSource(
     "lib/blocks/content/auto-fill-grid/usage.tsx"
   );
@@ -39,7 +36,7 @@ const AutoFillGridContent = () => {
 
   return (
     <div className="space-y-12">
-      {/* Preview Section - Full Width */}
+      {/* Preview Section */}
       <section className="w-full">
         {previewLoading ? (
           <div className="border rounded-lg p-8 flex items-center justify-center bg-muted/30">
@@ -53,7 +50,7 @@ const AutoFillGridContent = () => {
         )}
       </section>
 
-      {/* Installation Section - Constrained Width */}
+      {/* Installation Section */}
       <section className="space-y-4 max-w-4xl">
         <h2 className="text-2xl font-semibold tracking-tight">Installation</h2>
 
@@ -118,7 +115,7 @@ const AutoFillGridContent = () => {
         )}
       </section>
 
-      {/* Usage Section - Constrained Width */}
+      {/* Usage Section */}
       <section className="space-y-4 max-w-4xl">
         <h2 className="text-2xl font-semibold tracking-tight">Usage</h2>
         {usageLoading ? (
@@ -133,7 +130,7 @@ const AutoFillGridContent = () => {
         )}
       </section>
 
-      {/* Props Table - Constrained Width */}
+      {/* Props Table */}
      <section className="space-y-4 max-w-4xl">
              <h2 className="text-2xl font-semibold tracking-tight">Props</h2>
              <div className="border  rounded-xl overflow-hidden">

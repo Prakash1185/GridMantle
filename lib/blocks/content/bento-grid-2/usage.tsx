@@ -11,7 +11,6 @@ import {
 export default function MyPage() {
   return (
     <BentoGrid2>
-      {/* Small - Row 1, Col 1 */}
       <BentoCard2
         title="AI Analytics"
         description="Intelligent insights powered by ML."
@@ -20,7 +19,6 @@ export default function MyPage() {
         className="lg:col-start-1 lg:row-start-1 lg:row-end-2"
       />
 
-      {/* Large - Row 1-2, Col 2 */}
       <BentoCard2
         title="Real-time Dashboard"
         description="Monitor your metrics in real-time."
@@ -29,7 +27,6 @@ export default function MyPage() {
         className="lg:col-start-2 lg:row-start-1 lg:row-end-3"
       />
 
-      {/* Small - Row 1, Col 3 */}
       <BentoCard2
         title="Lightning Fast"
         description="Optimized for speed."
@@ -38,7 +35,6 @@ export default function MyPage() {
         className="lg:col-start-3 lg:row-start-1 lg:row-end-2"
       />
 
-      {/* Large - Row 2-3, Col 1 */}
       <BentoCard2
         title="Enterprise Security"
         description="Bank-grade encryption."
@@ -47,7 +43,6 @@ export default function MyPage() {
         className="lg:col-start-1 lg:row-start-2 lg:row-end-4"
       />
 
-      {/* Small - Row 3, Col 2 */}
       <BentoCard2
         title="Developer Tools"
         description="Powerful APIs."
@@ -56,7 +51,6 @@ export default function MyPage() {
         className="lg:col-start-2 lg:row-start-3 lg:row-end-4"
       />
 
-      {/* Large - Row 2-3, Col 3 */}
       <BentoCard2
         title="Scalable Infrastructure"
         description="Auto-scaling cloud."

@@ -23,7 +23,6 @@ export function BentoGrid2({
       className={cn(
         "grid gap-4",
         "grid-cols-1",
-        // Fixed: 3 columns, 3 rows (not 4!) to avoid extra space
         "lg:grid-cols-3 lg:grid-rows-3",
         className
       )}
@@ -72,7 +71,6 @@ export function BentoCard2({
         "group relative flex flex-col overflow-hidden rounded-xl border border-border bg-background p-6",
         "transition-all duration-300 ease-out",
         "hover:border-foreground/20 hover:shadow-lg",
-        // Dark mode shadow adjustment
         "dark:hover:shadow-neutral-900/50",
         className
       )}
@@ -87,7 +85,6 @@ export function BentoCard2({
         },
       }}
     >
-      {/* Pattern Background - Very subtle */}
       <PatternBackground pattern={pattern} />
 
       {/* Content */}
@@ -117,15 +114,13 @@ export function BentoCard2({
         </div>
       </div>
 
-      {/* Hover Overlay - Light/Dark compatible */}
+      {/* Hover Overlay */}
       <div className="pointer-events-none absolute inset-0 z-[1] transition-colors duration-300 group-hover:bg-foreground/[0.02] dark:group-hover:bg-foreground/[0.03]" />
     </motion.div>
   );
 }
 
-/* ---------------------------------- */
-/* Pattern Backgrounds - Very Subtle  */
-/* ---------------------------------- */
+/* Pattern Backgrounds  */
 
 function PatternBackground({ pattern }: { pattern: string }) {
   if (pattern === "none") return null;

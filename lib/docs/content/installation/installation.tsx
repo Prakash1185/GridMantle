@@ -6,13 +6,24 @@ const InstallationContent = () => {
 
   const installShadcn = `npx shadcn@latest init`;
 
-  const blocksAdd = `npx shadcn@latest add @gridmantle/masonry`;
+  const blocksAdd = `npx shadcn@latest add @gridmantle/column-grid`;
 
-  const importExample = `import { MasonryGrid } from "@/components/ui/masonry-grid"
+  const importExample = `import { ColumnGrid } from "@/components/ui/column-grid";
   
-export defaut function Home(){
-            return <MasonryGrid/>
-}`;
+  export default function MyPage() {
+    return (
+      <ColumnGrid 
+        columns={{ default: 1, sm: 2, md: 3, lg: 4 }} 
+        gap={6}
+        animate={true}
+      >
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+      </ColumnGrid>
+    );
+  }`;
 
   return (
     <>

@@ -5,7 +5,7 @@ const GithubFooterText = () => {
     <div className="text-center text-sm text-muted-foreground  max-w-4xl">
         Found an issue? Open an issue on{" "}
         <a
-          href="https://github.com/yourusername/gridmantle/issues"
+          href="https://github.com/Prakash1185/GridMantle/issues"
           target="_blank"
           rel="noopener noreferrer"
           className="text-primary hover:underline font-medium"

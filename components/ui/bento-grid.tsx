@@ -85,7 +85,7 @@ export function BentoCard({
         },
       }}
     >
-      {/* Pattern Background - Always visible */}
+      {/* Pattern Background */}
       <PatternBackground pattern={pattern} />
 
       {/* Content */}
@@ -119,9 +119,7 @@ export function BentoCard({
   );
 }
 
-/* ---------------------------------- */
 /* Pattern Backgrounds                */
-/* ---------------------------------- */
 
 function PatternBackground({ pattern }: { pattern: string }) {
   if (pattern === "none") return null;

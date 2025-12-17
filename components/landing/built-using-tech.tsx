@@ -4,7 +4,6 @@ import Image from "next/image";
 const BuiltUsingTech = () => {
   return (
     <div className="px-5">
-      {/* Technologies listed */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-0">
         {/* Next.js */}
         <div className="flex items-center justify-center h-20 sm:h-24  md:h-28 border-r border-b lg:border-b-0 border-dashed">

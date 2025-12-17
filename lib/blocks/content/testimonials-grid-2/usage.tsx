@@ -8,7 +8,6 @@ import {
 export default function MyPage() {
   return (
     <TestimonialsGrid2 columns={4} speed={25}>
-      {/* Text Review - Small */}
       <ReviewCard
         quote="Amazing product that changed our workflow."
         author="Sarah Chen"
@@ -18,7 +17,6 @@ export default function MyPage() {
         size="sm"
       />
 
-      {/* Video Review - Medium */}
       <VideoReviewCard
         videoSrc="https://videos.pexels.com/video-files/3129671/3129671-uhd_1440_2560_30fps.mp4"
         author="Emily Watson"
@@ -27,7 +25,6 @@ export default function MyPage() {
         size="md"
       />
 
-      {/* Image Review - Large */}
       <ImageReviewCard
         quote="The best tool we've ever used."
         author="Michael Rodriguez"
@@ -37,7 +34,6 @@ export default function MyPage() {
         size="lg"
       />
 
-      {/* Text Review - Large */}
       <ReviewCard
         quote="Outstanding support and incredible features that help us every day."
         author="David Kim"
@@ -46,7 +42,6 @@ export default function MyPage() {
         size="lg"
       />
 
-      {/* Add more cards... */}
     </TestimonialsGrid2>
   );
 }

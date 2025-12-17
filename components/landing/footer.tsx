@@ -18,7 +18,7 @@ const Footer = () => {
         <h1 className="pt-4">
           Built by{" "}
           <span className="underline text-primary cursor-pointer">
-            <Link href={"/"}>@Prakash</Link>
+            <Link href={"https://www.linkedin.com/in/prakash-kumar-b26183330/"} target="_blank">@Prakash</Link>
           </span>
         </h1>
         {/* Version 2 of the footer text */}
@@ -42,7 +42,7 @@ const Footer = () => {
             <Link href={"/docs"} className="hover:text-primary">
               Docs
             </Link>
-            <Link href={"/Blocks"} className="hover:text-primary">
+            <Link href={"/blocks"} className="hover:text-primary">
               Blocks
             </Link>
           </div>
@@ -52,10 +52,10 @@ const Footer = () => {
         <div>
           <h1 className="font-medium">Socials</h1>
           <div className="flex flex-col text-muted-foreground space-y-0.5 pt-1">
-            <Link href={"/docs"} className="hover:text-primary">
+            <Link href={"https://github.com/Prakash1185/GridMantle"} target="_blank" className="hover:text-primary">
               GitHub
             </Link>
-            <Link href={"/Blocks"} className="hover:text-primary">
+            <Link href={"/https://www.linkedin.com/in/prakash-kumar-b26183330/"} target="_blank" className="hover:text-primary">
               Linkdein
             </Link>
           </div>

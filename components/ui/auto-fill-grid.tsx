@@ -21,7 +21,6 @@ export function AutoFillGrid({
 }: AutoFillGridProps) {
   const Container = animate ? motion.div : "div";
 
-  // Map gap values to Tailwind classes
   const getGapClass = (gapValue: number) => {
     const gapMap: Record<number, string> = {
       0: "gap-0",

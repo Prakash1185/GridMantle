@@ -15,7 +15,6 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    // Security: Only allow reading from specific directories
     const allowedPaths = ["components/ui", "lib/blocks/content"];
 
     const isAllowed = allowedPaths.some((allowed) =>
@@ -29,11 +28,9 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    // Read the file
     const filePath = path.join(process.cwd(), componentPath);
     let fileContent = await fs.readFile(filePath, "utf-8");
 
-    // Strip internal utility code for preview files
     if (stripInternal || componentPath.includes("preview.tsx")) {
       fileContent = fileContent
         .replace(

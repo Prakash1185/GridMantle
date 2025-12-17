@@ -5,7 +5,6 @@ import ServicesGridContent from "@/lib/blocks/content/services-grid/services-gri
 export default function ServicesGridPage() {
   return (
     <div className="space-y-10">
-      {/* Header with constrained width */}
       <div className="max-w-4xl">
         <PageHeader
           title="Services Grid"
@@ -13,10 +12,8 @@ export default function ServicesGridPage() {
         />
       </div>
 
-      {/* Content - Full width for previews */}
       <ServicesGridContent />
 
-      {/* Footer with constrained width */}
       <div className="max-w-4xl mt-10">
         <NextPrev
           prev={{

@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <nav className="flex items-center justify-between gap-4 border-b py-2.5 w-full px-4 lg:px-36 border-dashed bg-background/80 z-50 sticky top-0 backdrop-blur-lg">
-      {/* LEFT GROUP - Menu + Logo */}
+      {/* LEFT GROUP */}
       <div className="flex items-center gap-2 md:gap-4 flex-shrink-0">
         {/* Mobile Drawer Toggle */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -42,7 +42,7 @@ const Navbar = () => {
             </SheetHeader>
 
             <div className="space-y-6">
-              {/* Navigation Links */}
+              {/* Links */}
               <div className="space-y-1.5 pb-4 border-b">
                 <Link
                   href="/docs/introduction"
@@ -60,7 +60,7 @@ const Navbar = () => {
                 </Link>
               </div>
 
-              {/* Sidebar Sections - Dynamic from docPages */}
+              {/* Sidebar Sections */}
               {sidebarSections.map((section) => (
                 <div key={section.title} className="space-y-2">
                   <h4 className="text-sm font-semibold tracking-tight">
@@ -91,7 +91,7 @@ const Navbar = () => {
           <h1 className="instrumental">GridMantle</h1>
         </Link>
 
-        {/* Desktop Navigation Links */}
+        {/* Desktop Links */}
         <div className="hidden lg:flex items-center space-x-4 text-muted-foreground font-medium">
           <Link
             href={"/docs/introduction"}
@@ -108,7 +108,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* RIGHT GROUP - Actions */}
+      {/* RIGHT GROUP */}
       <div className="flex items-center justify-center gap-2 flex-shrink-0">
         <div className="hidden sm:block">
           <CommandSearch />
@@ -120,7 +120,7 @@ const Navbar = () => {
           asChild
         >
           <a
-            href="https://github.com/yourusername/gridmantle"
+            href="https://github.com/Prakash1185/GridMantle"
             target="_blank"
             rel="noopener noreferrer"
           >

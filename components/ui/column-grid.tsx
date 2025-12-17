@@ -28,7 +28,6 @@ export function ColumnGrid({
 }: ColumnGridProps) {
   const Container = animate ? motion.div : "div";
 
-  // Map column numbers to Tailwind classes (must be complete class names)
   const getColumnClass = (breakpoint: string, cols?: number) => {
     if (!cols) return "";
     
@@ -86,7 +85,6 @@ export function ColumnGrid({
     return classMap[breakpoint]?.[cols] || "";
   };
 
-  // Map gap values to Tailwind classes
   const getGapClass = (gapValue: number) => {
     const gapMap: Record<number, string> = {
       0: "gap-0",

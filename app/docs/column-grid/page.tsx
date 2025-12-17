@@ -5,7 +5,6 @@ import ColumnGridContent from "@/lib/blocks/content/column-grid/column-grid";
 export default function ColumnGridPage() {
   return (
     <div className="space-y-10">
-      {/* Header with constrained width */}
       <div className="max-w-4xl">
         <PageHeader
           title="Column Grid"
@@ -13,10 +12,8 @@ export default function ColumnGridPage() {
         />
       </div>
 
-      {/* Content - Full width for previews */}
       <ColumnGridContent />
 
-      {/* Footer with constrained width */}
       <div className="max-w-4xl   mt-10">
         <NextPrev
           prev={{

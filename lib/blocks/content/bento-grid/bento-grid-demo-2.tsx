@@ -6,7 +6,6 @@ import { Sparkles, Zap, Shield, BarChart3 } from "lucide-react";
 export function BentoGridDemo2() {
   return (
     <BentoGrid className="lg:auto-rows-[280px]">
-      {/* Box 1 - Large, spans 2 cols on desktop */}
       <BentoCard
         title="AI-Powered Analytics"
         description="Harness the power of artificial intelligence to analyze your data and uncover hidden insights that drive growth."
@@ -16,7 +15,6 @@ export function BentoGridDemo2() {
         pattern="dots"
       />
 
-      {/* Box 2 - Tall, spans 2 rows on desktop */}
       <BentoCard
         title="Real-time Monitoring"
         description="Track your metrics in real-time with live dashboards. Get instant alerts when something needs your attention. Monitor performance across all your applications and services."
@@ -26,7 +24,6 @@ export function BentoGridDemo2() {
         pattern="cross"
       />
 
-      {/* Box 3 - Small */}
       <BentoCard
         title="Lightning Fast"
         description="Optimized performance with sub-millisecond response times."
@@ -36,7 +33,6 @@ export function BentoGridDemo2() {
         pattern="lines"
       />
 
-      {/* Box 4 - Small */}
       <BentoCard
         title="Enterprise Security"
         description="Bank-grade encryption and compliance with industry standards."
@@ -46,7 +42,6 @@ export function BentoGridDemo2() {
         pattern="dots"
       />
 
-      {/* Box 5 - Small */}
       <BentoCard
         title="Enterprise Security"
         description="Bank-grade encryption and compliance with industry standards."
@@ -56,7 +51,6 @@ export function BentoGridDemo2() {
         pattern="none"
       />
 
-      {/* Box 6 - Tall, spans 2 rows on desktop */}
       <BentoCard
         title="Real-time Monitoring"
         description="Track your metrics in real-time with live dashboards. Get instant alerts when something needs your attention. Monitor performance across all your applications and services."

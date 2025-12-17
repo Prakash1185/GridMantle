@@ -94,7 +94,6 @@ export function PinterestCard({
       <a href={href} className="block">
         {/* Image Container */}
         <div className="relative w-full overflow-hidden">
-          {/* Using native img for dynamic aspect ratios */}
           <img
             src={src}
             alt={alt}

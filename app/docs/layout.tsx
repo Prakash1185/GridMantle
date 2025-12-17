@@ -1,10 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
 import { DocsSidebar } from "@/components/docs/sidebar";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Button } from "@/components/ui/button";
-import { PanelLeft } from "lucide-react";
 
 export default function DocsLayout({
   children,
@@ -13,7 +10,6 @@ export default function DocsLayout({
 }) {
   return (
     <div className="min-h-screen">
-      {/* Container matches navbar width */}
       <div className="w-[calc(100%-2rem)] lg:w-[calc(100%-16rem)] mx-auto px-0">
         <div className="flex gap-6 lg:gap-10">
           {/* Desktop Sidebar */}
@@ -25,7 +21,7 @@ export default function DocsLayout({
             </div>
           </aside>
 
-          {/* Main Content - Responsive width */}
+          {/* Main Content*/}
           <main className="flex-1 py-6 lg:py-8 w-full overflow-x-hidden px-4 lg:px-0">
             <div className="max-w-4xl">{children}</div>
           </main>

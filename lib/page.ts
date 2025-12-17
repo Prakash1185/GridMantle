@@ -93,7 +93,6 @@ export function getAllPages(): DocPage[] {
   return docPages;
 }
 
-// Helper to generate sidebar sections
 export function getSidebarSections() {
   return categories.map((category) => ({
     title: category,

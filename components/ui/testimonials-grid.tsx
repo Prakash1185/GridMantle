@@ -49,7 +49,6 @@ export function TestimonialsGrid({
           }}
          
         >
-          {/* Original + Duplicate for seamless loop */}
           {children}
           {children}
         </motion.div>
@@ -58,9 +57,7 @@ export function TestimonialsGrid({
   );
 }
 
-/* ---------------------------------- */
-/* Testimonial Column                 */
-/* ---------------------------------- */
+/* Testimonial Column   */
 
 interface TestimonialColumnProps {
   children: React.ReactNode;
@@ -78,9 +75,7 @@ export function TestimonialColumn({
   );
 }
 
-/* ---------------------------------- */
 /* Text Testimonial Card              */
-/* ---------------------------------- */
 
 interface TestimonialCardProps {
   quote: string;
@@ -156,9 +151,7 @@ export function TestimonialCard({
   );
 }
 
-/* ---------------------------------- */
-/* Video Testimonial Card             */
-/* ---------------------------------- */
+/* Video Testimonial Card */
 
 interface VideoTestimonialCardProps {
   videoSrc: string;
@@ -181,10 +174,8 @@ export function VideoTestimonialCard({
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // Auto-play video when component mounts
     if (videoRef.current) {
       videoRef.current.play().catch(() => {
-        // Autoplay might be blocked, that's okay
       });
     }
   }, []);
@@ -240,10 +231,7 @@ export function VideoTestimonialCard({
   );
 }
 
-/* ---------------------------------- */
 /* Featured Testimonial Card          */
-/* ---------------------------------- */
-
 interface FeaturedTestimonialCardProps {
   quote: string;
   author: string;

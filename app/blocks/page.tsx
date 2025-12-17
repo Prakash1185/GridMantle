@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
-// Import all demos
 import { BentoGridDemo } from "@/lib/blocks/content/bento-grid/bento-grid-demo";
 import { TestimonialsGridDemo } from "@/lib/blocks/content/testimonials-grid/testimonials-grid-demo";
 import { TestimonialsGrid2Demo } from "@/lib/blocks/content/testimonials-grid-2/testimonials-grid-2-demo";
@@ -14,7 +13,6 @@ import { BentoGrid2Demo } from "@/lib/blocks/content/bento-grid-2/bento-grid-2-d
 import { ColumnGridPreview } from "@/lib/blocks/content/column-grid/preview";
 import { AutoFillGridDemo } from "@/lib/blocks/content/auto-fill-grid/auto-fill-demo";
 
-// Blocks data array
 const blocks = [
   {
     name: "Testimonials Grid",
@@ -68,7 +66,6 @@ const blocks = [
 ];
 
 
-// Block card component
 function BlockCard({
   name,
   slug,

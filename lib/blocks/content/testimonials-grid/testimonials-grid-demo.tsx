@@ -11,7 +11,6 @@ import {
 export function TestimonialsGridDemo() {
   return (
     <TestimonialsGrid speed={40} direction="left">
-      {/* Column 1: Small + Large */}
       <TestimonialColumn>
         <TestimonialCard
           quote="This product completely transformed how our team collaborates. The interface is intuitive and powerful."
@@ -30,7 +29,6 @@ export function TestimonialsGridDemo() {
         />
       </TestimonialColumn>
 
-      {/* Column 2: Video + Small */}
       <TestimonialColumn>
         <VideoTestimonialCard
           videoSrc="https://cdn.pixabay.com/video/2025/10/04/307864_tiny.mp4"
@@ -47,7 +45,6 @@ export function TestimonialsGridDemo() {
         />
       </TestimonialColumn>
 
-      {/* Column 3: Small + Small + Small */}
       <TestimonialColumn>
         <TestimonialCard
           quote="The best investment we made this year. ROI was visible within the first month."
@@ -71,7 +68,6 @@ export function TestimonialsGridDemo() {
         />
       </TestimonialColumn>
 
-      {/* Column 4: Featured + Small */}
       <TestimonialColumn>
         <FeaturedTestimonialCard
           quote="This is the future of how teams will work. Absolutely game-changing technology."
@@ -90,7 +86,6 @@ export function TestimonialsGridDemo() {
         />
       </TestimonialColumn>
 
-      {/* Column 5: Small + Video */}
       <TestimonialColumn>
         <TestimonialCard
           quote="Finally, a tool that understands what developers actually need. The DX is exceptional."
@@ -107,7 +102,6 @@ export function TestimonialsGridDemo() {
         />
       </TestimonialColumn>
 
-      {/* Column 6: Small + Featured */}
       <TestimonialColumn>
         <TestimonialCard
           quote="We've tried many solutions, but this one stands out. Highly recommend to any growing team."
@@ -125,7 +119,6 @@ export function TestimonialsGridDemo() {
         />
       </TestimonialColumn>
 
-      {/* Column 7: Small + Small + Small */}
       <TestimonialColumn>
         <TestimonialCard
           quote="Incredible value for money. Features that used to cost us thousands are now accessible."

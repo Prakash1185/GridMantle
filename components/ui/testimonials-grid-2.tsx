@@ -20,7 +20,6 @@ export function TestimonialsGrid2({
 }: TestimonialsGrid2Props) {
   const childrenArray = React.Children.toArray(children);
 
-  // Distribute children into columns
   const columnArrays: React.ReactNode[][] = Array.from(
     { length: columns },
     () => []
@@ -36,12 +35,8 @@ export function TestimonialsGrid2({
     4: "grid-cols-2 lg:grid-cols-3 xl:grid-cols-4",
   };
 
-  // Get visibility class for columns that go down (odd indexed)
   const getVisibilityClass = (columnIndex: number): string => {
-    // Even columns (0, 2, 4) go UP - always visible
-    // Odd columns (1, 3) go DOWN - hidden on small screens
     if (columnIndex % 2 === 1) {
-      // Hide on mobile, show on lg+
       return "hidden lg:block";
     }
     return "";
@@ -77,9 +72,7 @@ export function TestimonialsGrid2({
   );
 }
 
-/* ---------------------------------- */
-/* Testimonial Column 2               */
-/* ---------------------------------- */
+/* Testimonial Column 2 */
 
 interface TestimonialColumn2Props {
   children: React.ReactNode;
@@ -112,7 +105,7 @@ export function TestimonialColumn2({
           willChange: "transform",
         }}
       >
-        {/* Original + Duplicate for seamless loop */}
+        {/* Original + Duplicate for loop */}
         {children}
         {children}
       </motion.div>
@@ -121,9 +114,7 @@ export function TestimonialColumn2({
 }
 
 
-/* ---------------------------------- */
-/* Review Card                        */
-/* ---------------------------------- */
+/* Review Card  */
 
 interface ReviewCardProps {
   quote: string;
@@ -185,7 +176,7 @@ export function ReviewCard({
           <img
             src={avatar}
             alt={author}
-            className="w-9 h-9 md:w-10 md:h-10 rounded-full object-cover border-2 border-border/50"
+            className="w-9 h-9 md:w-10 md:h-10 rounded-full object-cover border-2 border-border/50 hidden sm:block"
           />
         ) : (
           <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/40 flex items-center justify-center text-sm font-semibold text-primary">
@@ -209,9 +200,7 @@ export function ReviewCard({
   );
 }
 
-/* ---------------------------------- */
-/* Video Review Card                  */
-/* ---------------------------------- */
+/* Video Review Card  */
 
 interface VideoReviewCardProps {
   videoSrc: string;
@@ -297,9 +286,7 @@ export function VideoReviewCard({
   );
 }
 
-/* ---------------------------------- */
-/* Image Review Card                  */
-/* ---------------------------------- */
+/* Image Review Card   */
 
 interface ImageReviewCardProps {
   quote: string;
@@ -363,7 +350,7 @@ export function ImageReviewCard({
             <img
               src={avatar}
               alt={author}
-              className="w-9 h-9 md:w-10 md:h-10 rounded-full object-cover border-2 border-white/30"
+              className="w-9 h-9 md:w-10 md:h-10 rounded-full object-cover border-2 border-white/30 hidden sm:block"
             />
           ) : (
             <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white/20 flex items-center justify-center text-sm font-semibold text-white">

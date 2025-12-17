@@ -70,20 +70,19 @@ function GridCell({
   borderClass,
   animate,
 }: GridCellProps) {
-  // Calculate row and column positions
   const cols = { lg: 3, md: 2, sm: 1 };
 
-  // Desktop: 3 columns
+  // Desktop
   const lgRow = Math.floor(index / cols.lg);
   const lgCol = index % cols.lg;
   const lgTotalRows = Math.ceil(total / cols.lg);
 
-  // Tablet: 2 columns
+  // Tablet
   const mdRow = Math.floor(index / cols.md);
   const mdCol = index % cols.md;
   const mdTotalRows = Math.ceil(total / cols.md);
 
-  // Border logic
+  // Border
   const isLastLgCol = lgCol === cols.lg - 1;
   const isLastLgRow = lgRow === lgTotalRows - 1;
   const isLastMdCol = mdCol === cols.md - 1;
@@ -94,13 +93,13 @@ function GridCell({
     <motion.div
       className={cn(
         "relative",
-        // Desktop borders (3 cols)
+        // Desktop 
         !isLastLgCol && "lg:border-r-2",
         !isLastLgRow && "lg:border-b-2",
-        // Tablet borders (2 cols)
+        // Tablet
         !isLastMdCol && "md:border-r-2",
         !isLastMdRow && "md:border-b-2",
-        // Mobile borders (1 col)
+        // Mobile
         !isLastItem && "max-md:border-b-2",
         // Reset for tablet
         isLastLgCol && !isLastMdCol && "lg:border-r-2-0 md:border-r-2",
@@ -123,7 +122,7 @@ function GridCell({
           : undefined
       }
     >
-      {/* Plus sign at intersections */}
+      {/* Plus sign  */}
       {!isLastLgCol && !isLastLgRow && (
         <div className="absolute -b-2ottom-[5px] -r-2ight-[5px] w-[10px] h-[10px] z-10 hidden lg:block">
           <div className={cn("absolute top-1/2 left-0 w-full h-[1px] -translate-y-1/2", borderClass.replace("border-", "bg-"))} />
