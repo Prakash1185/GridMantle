@@ -21,7 +21,7 @@ export function TestimonialsGrid2Demo() {
       />
 
       <VideoReviewCard
-        videoSrc="https://www.pexels.com/download/video/7989854/"
+        videoSrc="https://cdn.pixabay.com/video/2025/10/04/307864_tiny.mp4"
         author="Emily Watson"
         role="CEO"
         company="TechFlow"
@@ -67,7 +67,7 @@ export function TestimonialsGrid2Demo() {
       />
 
       <VideoReviewCard
-        videoSrc="https://www.pexels.com/download/video/7989667/"
+        videoSrc="https://cdn.pixabay.com/video/2025/06/03/283431_tiny.mp4"
         author="Chris Anderson"
         role="Tech Lead"
         company="Shopify"
@@ -112,7 +112,7 @@ export function TestimonialsGrid2Demo() {
       />
 
       <VideoReviewCard
-        videoSrc="https://www.pexels.com/download/video/7989854/"
+        videoSrc="https://cdn.pixabay.com/video/2025/10/04/307864_tiny.mp4"
         author="Maria Garcia"
         role="Head of Growth"
         company="Webflow"
@@ -121,7 +121,7 @@ export function TestimonialsGrid2Demo() {
 
       {/* Row 4 */}
       <VideoReviewCard
-        videoSrc="https://www.pexels.com/download/video/5925286/"
+        videoSrc="https://cdn.pixabay.com/video/2025/06/09/284568_tiny.mp4"
         author="Kevin Lee"
         role="Finance Manager"
         company="Plaid"

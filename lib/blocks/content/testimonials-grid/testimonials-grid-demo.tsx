@@ -33,7 +33,7 @@ export function TestimonialsGridDemo() {
       {/* Column 2: Video + Small */}
       <TestimonialColumn>
         <VideoTestimonialCard
-          videoSrc="https://www.pexels.com/download/video/5377697/"
+          videoSrc="https://cdn.pixabay.com/video/2025/10/04/307864_tiny.mp4"
           author="Amy Janson"
           role="CEO"
           company="Company"
@@ -100,7 +100,7 @@ export function TestimonialsGridDemo() {
           avatar="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop"
         />
         <VideoTestimonialCard
-          videoSrc="https://www.pexels.com/download/video/5377268/"
+          videoSrc="https://cdn.pixabay.com/video/2024/08/30/228847_tiny.mp4"
           author="Chris Anderson"
           role="Tech Lead"
           company="Shopify"
