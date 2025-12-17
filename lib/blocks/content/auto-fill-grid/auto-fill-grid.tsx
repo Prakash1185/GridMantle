@@ -31,7 +31,7 @@ const AutoFillGridContent = () => {
     "lib/blocks/content/auto-fill-grid/usage.tsx"
   );
 
-  const cliCommand = `npx shadcn@latest add @gridmantle/auto-fill-grid`;
+  const cliCommand = `npx shadcn@latest add https://gridmantle.vercel.app/r/auto-fill-grid.json`;
   const installDeps = `npm install framer-motion`;
 
   return (

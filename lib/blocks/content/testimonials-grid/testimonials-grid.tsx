@@ -49,7 +49,7 @@ const TestimonialsGridContent = () => {
     "lib/blocks/content/testimonials-grid/usage.tsx"
   );
 
-  const cliCommand = `npx shadcn@latest add @gridmantle/testimonials-grid`;
+  const cliCommand = `npx shadcn@latest add https://gridmantle.vercel.app/r/testimonials-grid.json`;
   const installDeps = `npm install framer-motion @remixicon/react`;
 
   const PROPS_TABLES = [

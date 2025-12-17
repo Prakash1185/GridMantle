@@ -31,7 +31,7 @@ const PinterestGridContent = () => {
     "lib/blocks/content/pinterest-grid/usage.tsx"
   );
 
-  const cliCommand = `npx shadcn@latest add @gridmantle/pinterest-grid`;
+  const cliCommand = `npx shadcn@latest add https://gridmantle.vercel.app/r/pinterest-grid.json`;
   const installDeps = `npm install framer-motion`;
 
   return (

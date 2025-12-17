@@ -32,7 +32,7 @@ const ServicesGridContent = () => {
     "lib/blocks/content/services-grid/usage.tsx"
   );
 
-  const cliCommand = `npx shadcn@latest add @gridmantle/services-grid`;
+  const cliCommand = `npx shadcn@latest add https://gridmantle.vercel.app/r/services-grid.json`;
   const installDeps = `npm install framer-motion lucide-react`;
 
   return (

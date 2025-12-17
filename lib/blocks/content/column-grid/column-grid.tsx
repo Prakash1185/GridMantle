@@ -32,7 +32,7 @@ const ColumnGridContent = () => {
     "lib/blocks/content/column-grid/usage.tsx"
   );
 
-  const cliCommand = `npx shadcn@latest add @gridmantle/column-grid`;
+  const cliCommand = `npx shadcn@latest add https://gridmantle.vercel.app/r/column-grid.json`;
   const installDeps = `npm install framer-motion`;
 
   return (
