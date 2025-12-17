@@ -15,6 +15,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import GithubFooterText from "@/components/github-footer-text";
 
 const PinterestGridContent = () => {
   const [installTab, setInstallTab] = useState<"cli" | "manual">("cli");
@@ -197,49 +198,9 @@ const PinterestGridContent = () => {
         </div>
       </section>
 
-      {/* Column Examples */}
-      <section className="space-y-4 max-w-4xl">
-        <h2 className="text-2xl font-semibold tracking-tight">Column Options</h2>
-        <div className="border rounded-xl p-6 bg-muted/20">
-          <div className="space-y-4">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
-              <div className="p-3 rounded-lg bg-background border">
-                <code className="text-xs font-mono">columns={2}</code>
-                <p className="text-muted-foreground mt-1">2 columns max</p>
-              </div>
-              <div className="p-3 rounded-lg bg-background border">
-                <code className="text-xs font-mono">columns={3}</code>
-                <p className="text-muted-foreground mt-1">3 columns max</p>
-              </div>
-              <div className="p-3 rounded-lg bg-background border border-primary">
-                <code className="text-xs font-mono">columns={4}</code>
-                <p className="text-muted-foreground mt-1">4 columns (default)</p>
-              </div>
-              <div className="p-3 rounded-lg bg-background border">
-                <code className="text-xs font-mono">columns={5}</code>
-                <p className="text-muted-foreground mt-1">5 columns max</p>
-              </div>
-              <div className="p-3 rounded-lg bg-background border">
-                <code className="text-xs font-mono">columns={6}</code>
-                <p className="text-muted-foreground mt-1">6 columns max</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    
 
-      {/* Footer */}
-      <div className="text-center text-sm text-muted-foreground border-t pt-6 max-w-4xl">
-        Found an issue? Open an issue on{" "}
-        <a
-          href="https://github.com/yourusername/gridmantle/issues"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-primary hover:underline font-medium"
-        >
-          GitHub
-        </a>
-      </div>
+     <GithubFooterText/>
     </div>
   );
 };

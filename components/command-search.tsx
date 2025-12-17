@@ -65,11 +65,7 @@ export function CommandSearch() {
                     className="cursor-pointer"
                   >
                     <span className="font-medium">{page.title}</span>
-                    {page.description && (
-                      <span className="ml-2 text-xs text-muted-foreground">
-                        {page.description}
-                      </span>
-                    )}
+                    
                   </CommandItem>
                 ))}
               </CommandGroup>

@@ -14,7 +14,7 @@ export default function TestimonialsGridPage() {
 
       <TestimonialsGridContent />
 
-      <div className="max-w-4xl border-t pt-6 mt-10">
+      <div className="max-w-4xl  mt-10">
         <NextPrev
           prev={{
             title: "Pinterest Grid",
@@ -22,8 +22,8 @@ export default function TestimonialsGridPage() {
             category: "Blocks",
           }}
           next={{
-            title: "Feature Grid",
-            slug: "feature-grid",
+            title: "Testimonials Grid 2",
+            slug: "testimonials-grid-2",
             category: "Blocks",
           }}
         />

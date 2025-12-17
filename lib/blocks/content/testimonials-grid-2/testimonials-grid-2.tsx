@@ -20,6 +20,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import GithubFooterText from "@/components/github-footer-text";
 
 type PropsRow = {
   prop: string;
@@ -193,18 +194,7 @@ const TestimonialsGrid2Content = () => {
         <PropsTable title="ImageReviewCard Props" data={imageReviewCardProps} />
       </section>
 
-      {/* Footer */}
-      <div className="text-center text-sm text-muted-foreground border-t pt-6 max-w-4xl">
-        Found an issue? Open an issue on{" "}
-        <a
-          href="https://github.com/yourusername/gridmantle/issues"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-primary hover:underline font-medium"
-        >
-          GitHub
-        </a>
-      </div>
+      <GithubFooterText/>
     </div>
   );
 };

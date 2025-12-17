@@ -25,8 +25,8 @@ export default function ServicesGridPage() {
             category: "Blocks",
           }}
           next={{
-            title: "Metro Grid",
-            slug: "metro-grid",
+            title: "Bento Grid",
+            slug: "bento-grid",
             category: "Blocks",
           }}
         />

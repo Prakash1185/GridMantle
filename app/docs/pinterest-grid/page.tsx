@@ -14,7 +14,7 @@ export default function PinterestGridPage() {
 
       <PinterestGridContent />
 
-      <div className="max-w-4xl border-t pt-6 mt-10">
+      <div className="max-w-4xl  mt-10">
         <NextPrev
           prev={{
             title: "Bento Grid 2",
@@ -22,8 +22,8 @@ export default function PinterestGridPage() {
             category: "Blocks",
           }}
           next={{
-            title: "Gallery Grid",
-            slug: "gallery-grid",
+            title: "Testimonials Grid",
+            slug: "testimonials-grid",
             category: "Blocks",
           }}
         />

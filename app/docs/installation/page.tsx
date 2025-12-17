@@ -20,8 +20,8 @@ export default function InstallationPage() {
             category: "Getting Started",
           }}
           next={{
-            title: "Masonry Grid",
-            slug: "masonry-grid",
+            title: "Column Grid",
+            slug: "column-grid",
             category: "Blocks",
           }}
         />

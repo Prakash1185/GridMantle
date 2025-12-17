@@ -22,8 +22,8 @@ export default function BentoGridPage() {
             category: "Blocks",
           }}
           next={{
-            title: "Masonry Grid",
-            slug: "masonry-grid",
+            title: "Bento Grid 2",
+            slug: "bento-grid-2",
             category: "Blocks",
           }}
         />

@@ -74,23 +74,16 @@ export const docPages: DocPage[] = [
     description:
       "A n*n even layout based responsive services grid for listing out your features",
   },
-    {
+  {
     title: "Contribute",
     slug: "contribute",
     category: "Extras",
     description:
       "A n*n even layout based responsive services grid for listing out your features",
   },
-    {
-    title: "Feedback",
-    slug: "feedback",
-    category: "Extras",
-    description:
-      "A n*n even layout based responsive services grid for listing out your features",
-  },
 ];
 
-export const categories = ["Getting Started", "Blocks","Extras"];
+export const categories = ["Getting Started", "Blocks", "Extras"];
 
 export function getPagesByCategory(category: string): DocPage[] {
   return docPages.filter((page) => page.category === category);

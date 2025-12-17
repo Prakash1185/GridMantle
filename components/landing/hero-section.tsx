@@ -40,8 +40,8 @@ const HeroSection = () => {
         </div>
         {/* CTA Buttons */}
         <div className="space-x-1.5 sm:space-x-2.5 py-8 ">
-          <Button className="rounded-lg cursor-pointer">Get Started <span className="bg-secondary/50 rounded-full p-0.5"><RiArrowRightUpLine/></span></Button>
-          <Button  className="rounded-lg cursor-pointer border-2 hover:bg-primary/10 bg-background text-foreground">Browse Blocks</Button>
+          <Link href={"/docs/introduction"}><Button className="rounded-lg cursor-pointer">Get Started <span className="bg-secondary/50 rounded-full p-0.5"><RiArrowRightUpLine/></span></Button></Link>
+          <Link href={"/blocks"}><Button  className="rounded-lg cursor-pointer border-2 hover:bg-primary/10 bg-background text-foreground">Browse Blocks</Button></Link>
         </div>
         </div>
     </div>

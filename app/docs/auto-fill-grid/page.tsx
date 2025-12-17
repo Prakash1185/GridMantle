@@ -25,8 +25,8 @@ export default function AutoFillGridPage() {
             category: "Blocks",
           }}
           next={{
-            title: "Masonry Grid",
-            slug: "masonry-grid",
+            title: "Services Grid",
+            slug: "services-grid",
             category: "Blocks",
           }}
         />

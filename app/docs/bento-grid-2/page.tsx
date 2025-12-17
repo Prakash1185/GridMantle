@@ -14,7 +14,7 @@ export default function BentoGrid2Page() {
 
       <BentoGrid2Content />
 
-      <div className="max-w-4xl border-t pt-6 mt-10">
+      <div className="max-w-4xl  mt-10">
         <NextPrev
           prev={{
             title: "Bento Grid",
@@ -22,8 +22,8 @@ export default function BentoGrid2Page() {
             category: "Blocks",
           }}
           next={{
-            title: "Masonry Grid",
-            slug: "masonry-grid",
+            title: "Pinterest Grid",
+            slug: "pinterest-grid",
             category: "Blocks",
           }}
         />

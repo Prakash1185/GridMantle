@@ -14,7 +14,7 @@ export default function TestimonialsGrid2Page() {
 
       <TestimonialsGrid2Content />
 
-      <div className="max-w-4xl border-t pt-6 mt-10">
+      <div className="max-w-4xl  mt-10">
         <NextPrev
           prev={{
             title: "Testimonials Grid",
@@ -22,9 +22,9 @@ export default function TestimonialsGrid2Page() {
             category: "Blocks",
           }}
           next={{
-            title: "Feature Grid",
-            slug: "feature-grid",
-            category: "Blocks",
+            title: "Contribute",
+            slug: "contribute",
+            category: "Extras",
           }}
         />
       </div>
